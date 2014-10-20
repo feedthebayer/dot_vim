@@ -11,6 +11,12 @@ let maplocalleader = "\\"
 " Unmapped While Learning
 " -----------------------
 
+" Arrow keys while learning hjkl
+noremap <Up>    <nop>
+noremap <Down>  <nop>
+noremap <Left>  <nop>
+noremap <Right> <nop>
+
 " No-op ^ and $ while learning H and L
 noremap ^ <nop>
 noremap $ <nop>
