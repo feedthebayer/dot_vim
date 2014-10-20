@@ -29,14 +29,20 @@ endif
 " ---------------
 set ruler          " Ruler on
 set number         " Line numbers on
-set nowrap         " Line wrapping off
+if has('win32') || has('win64')
+  set nowrap         " Line wrapping off
+endif
 set laststatus=2   " Always show the statusline
 set cmdheight=2    " Make the command area two lines high
 set encoding=utf-8
 set noshowmode     " Don't show the mode since Powerline shows it
 set title          " Set the title of the window in the terminal to the file
 if exists('+colorcolumn')
-  set colorcolumn=80 " Color the 80th column differently as a wrapping guide.
+  if has('win32') || has('win64')
+    set colorcolumn=110 " Color the 110th column differently as a wrapping guide.
+  else
+    set colorcolumn=80 " Color the 80th column differently as a wrapping guide.
+  endif
 endif
 " Disable tooltips for hovering keywords in Vim
 if exists('+ballooneval')
@@ -73,9 +79,17 @@ set switchbuf=useopen  " Switch to an existing buffer if one exists
 " ---------------
 " Text Format
 " ---------------
-set tabstop=2
+if has('win32') || has('win64')
+  set tabstop=3
+else
+  set tabstop=2
+endif
 set backspace=indent,eol,start " Delete everything with backspace
-set shiftwidth=2 " Tabs under smart indent
+if has('win32') || has('win64')
+  set shiftwidth=3 " Tabs under smart indent
+else
+  set shiftwidth=2 " Tabs under smart indent
+endif
 set shiftround
 set cindent
 set autoindent
