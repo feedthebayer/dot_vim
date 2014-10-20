@@ -22,7 +22,7 @@ if has("autocmd")
 
     " Fix trailing whitespace in my most used programming langauges
     autocmd BufWritePre *.py,*.coffee,*.rb,*.erb,*.md,*.scss,*.vim,Cakefile,
-          \*.hbs
+          \*.hbs,*.c,*.h,*.cpp
           \ silent! :StripTrailingWhiteSpace
 
     " Help mode bindings
