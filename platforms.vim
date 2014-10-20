@@ -5,19 +5,19 @@
 if has('win32') || has('win64')
   " Windows
   source $VIMRUNTIME/mswin.vim
-  set guifont=Consolas:h10
+  set guifont=Source\ Code\ Pro:h11
   set guioptions-=T " Toolbar
   set guioptions-=m " Menubar
 
   " Set height and width on Windows
-  set lines=60
+  set lines=62
   set columns=120
 
   " Disable quickfixsigns on Windows due to incredible slowdown.
   let g:loaded_quickfixsigns=1
 
   " Windows has a nasty habit of launching gVim in the wrong working directory
-  cd ~
+  cd D:/home/bbayer
 elseif has('gui_macvim')
   " MacVim
 
