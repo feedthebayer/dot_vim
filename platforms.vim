@@ -8,6 +8,8 @@ if has('win32') || has('win64')
   set guifont=Source\ Code\ Pro:h11
   set guioptions-=T " Toolbar
   set guioptions-=m " Menubar
+  set guioptions-=r " Right scrollbar
+  set guioptions-=L " Left scrollbar
 
   " Set height and width on Windows
   set lines=62
