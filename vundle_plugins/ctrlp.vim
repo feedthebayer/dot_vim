@@ -15,7 +15,7 @@ let g:ctrlp_mruf_max = 350
 let g:ctrlp_mruf_default_order = 0
 
 " Leader Commands
-nnoremap <leader>t :CtrlPRoot<CR>
+nnoremap <leader>t :CtrlPTag<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>u :CtrlPCurFile<CR>
 nnoremap <leader>m :CtrlPMRUFiles<CR>
