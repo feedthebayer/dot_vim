@@ -72,6 +72,12 @@ nnoremap <silent> gj :WriteBufferIfNecessary<CR>:wincmd j<CR>
 nnoremap <silent> gk :WriteBufferIfNecessary<CR>:wincmd k<CR>
 nnoremap <silent> gl :WriteBufferIfNecessary<CR>:wincmd l<CR>
 
+" Toggle fullscreen on Windows using
+" http://www.vim.org/scripts/script.php?script_id=2596
+if has('win32') || has('win64')
+  noremap <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
+endif
+
 "   4 Window Splits
 "
 "   -----------------
