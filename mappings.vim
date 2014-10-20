@@ -117,6 +117,9 @@ inoremap jK <Esc>
 " Leader Mappings
 " ---------------
 
+" Change working directory to that of the current file
+noremap <leader>cd :lcd %:p:h<CR>:pwd<CR>
+
 " Clear search
 noremap <silent><leader>/ :nohls<CR>:call clearmatches()<cr>
 
