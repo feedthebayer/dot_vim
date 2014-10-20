@@ -1,5 +1,5 @@
 " =============================================================================
-" Who: Jeremy Mack (@mutewinter)
+" Who: Brandon Bayer (@bsbayer) - Thanks to Jeremy Mack (@mutewinter)!
 " Description: The Vim Configuration of Champions
 " Version: 3.0 - Now each plugin is included and managed in its own file!
 " =============================================================================
