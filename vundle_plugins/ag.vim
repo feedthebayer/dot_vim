@@ -4,10 +4,13 @@
 " URL: https://github.com/rking/ag.vim
 " =============================================================================
 
-if exists('g:vundle_installing_plugins')
-  Plugin 'rking/ag.vim'
-  finish
-endif
+" Only use AG on Mac because of Silver Search difficulties on windows
+if has('gui_macvim')
+  if exists('g:vundle_installing_plugins')
+    Plugin 'rking/ag.vim'
+    finish
+  endif
 
-nnoremap <silent> <leader>as :AgFromSearch<CR>
-nnoremap <leader>ag :Ag<space>
+  nnoremap <silent> <leader>as :AgFromSearch<CR>
+  nnoremap <leader>ag :Ag<space>
+endif
