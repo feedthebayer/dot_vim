@@ -22,7 +22,7 @@ nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>u :CtrlPCurFile<CR>
 nnoremap <leader>m :CtrlPMRUFiles<CR>
 
-if executable('ag')
+if executable('ag') && has('gui_macvim')
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   " HatTip: http://robots.thoughtbot.com/faster-grepping-in-vim and
   " @ethanmuller
