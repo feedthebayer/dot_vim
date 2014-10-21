@@ -13,12 +13,12 @@ if has('win32') || has('win64')
   endif
 
   " unicode symbols
-  let g:airline_left_sep = '»'
-  let g:airline_left_sep = '▶'
-  let g:airline_right_sep = '«'
-  let g:airline_right_sep = '◀'
+  let g:airline_left_sep = ''
+  let g:airline_left_sep = ''
+  let g:airline_right_sep = ''
+  let g:airline_right_sep = ''
   let g:airline_symbols.linenr = '¶'
-  let g:airline_symbols.branch = '§ '
+  let g:airline_symbols.branch = ''
   let g:airline_symbols.paste = 'Þ'
   let g:airline_symbols.whitespace = '•'
 elseif has('gui_macvim')
@@ -37,9 +37,8 @@ let g:airline_mode_map = {
       \ '' : 'VB',
       \ }
 " Show the current working directory folder name
-let g:airline_section_b = '%{substitute(getcwd(), ".*\/", "", "g")} '
-" Just show the file name
-let g:airline_section_c = '%t'
-let g:airline_section_y = ''
+let g:airline_section_b = '%{substitute(getcwd(), ".*\/", "", "g")}'
+let g:airline_section_x = ''
+let g:airline_section_y = '%{airline#util#wrap(airline#extensions#branch#get_head(),0)}'
 let g:airline_section_z = '%3p%% %#__accent_bold#%4l%#__restore__#:%3'
 let g:airline_section_z = '%3p%% %{substitute(line("."), "\\v(\\d)((\\d\\d\\d)+\\d@!)@=", "\\1,", "g")}|%{substitute(line("$"), "\\v(\\d)((\\d\\d\\d)+\\d@!)@=", "\\1,", "g")}'
