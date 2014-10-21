@@ -8,3 +8,6 @@ nnoremap <silent><leader>cc :TComment<CR>
 vnoremap <silent><leader>cc :TComment<CR>
 nnoremap <silent><leader>cb :TCommentBlock<CR>
 vnoremap <silent><leader>cb :TCommentBlock<CR>
+
+" Use '//' for C comments instead of '/* .. */'
+call tcomment#DefineType('c', '// %s')
