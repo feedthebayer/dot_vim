@@ -66,6 +66,7 @@ dependencies.
   readme](https://github.com/JazzCore/ctrlp-cmatcher).
 * [underscore-cli](https://github.com/ddopson/underscore-cli) for sweet JSON
   formatting.
+* [OSX only] [YouCompleteMe](https://github.com/blueyed/YouCompleteMe) requires compilation according to the instructions in it's readme.
 
 ## Mappings
 
