@@ -1,5 +1,5 @@
 " Only use on Mac because YCM has no official Windows support
-if has('gui_macvim')
+if has('macunix') || has('mac')
   if exists('g:vundle_installing_plugins')
     Plugin 'blueyed/YouCompleteMe'
     finish

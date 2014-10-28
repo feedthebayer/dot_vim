@@ -5,7 +5,7 @@
 " =============================================================================
 
 " Only use AG on Mac because of Silver Search difficulties on windows
-if has('gui_macvim')
+if has('macunix') || has('mac')
   if exists('g:vundle_installing_plugins')
     Plugin 'rking/ag.vim'
     finish
