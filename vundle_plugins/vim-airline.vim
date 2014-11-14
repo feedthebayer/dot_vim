@@ -3,7 +3,7 @@ if exists('g:vundle_installing_plugins')
   finish
 endif
 
-let g:airline_theme = 'jellybeans'
+" let g:airline_theme = 'solarized'
 " Enable powerline fonts only on Mac
 if has('win32') || has('win64')
   let g:airline_powerline_fonts = 0
