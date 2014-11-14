@@ -5,7 +5,7 @@
 if has('win32') || has('win64')
   " Windows
   source $VIMRUNTIME/mswin.vim
-  set guifont=Source\ Code\ Pro:h10.5
+  set guifont=Source\ Code\ Pro\ Semibold:h10.5
   set guioptions-=T " Toolbar
   set guioptions-=m " Menubar
   set guioptions-=r " Right scrollbar
