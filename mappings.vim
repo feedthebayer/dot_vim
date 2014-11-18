@@ -27,8 +27,8 @@ nnoremap <leader>sc <nop>
 " ---------------
 
 " Use ; for : in normal and visual mode, less keystrokes
-nnoremap ; :
-vnoremap ; :
+" nnoremap ; :
+" vnoremap ; :
 
 " Yank entire buffer with gy
 nnoremap gy :%y+<cr>
