@@ -115,10 +115,10 @@ vnoremap <C-k> 15gkzz
 " ---------------
 
 " Let's make escape better, together.
-inoremap jk <Esc>
-inoremap JK <Esc>
-inoremap Jk <Esc>
-inoremap jK <Esc>
+" inoremap jk <Esc>
+" inoremap JK <Esc>
+" inoremap Jk <Esc>
+" inoremap jK <Esc>
 
 " ---------------
 " Leader Mappings
