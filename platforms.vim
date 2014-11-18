@@ -17,6 +17,8 @@ if has('win32') || has('win64')
 
   " Disable quickfixsigns on Windows due to incredible slowdown.
   let g:loaded_quickfixsigns=1
+  " Disable italic text on gVim because of bad display
+  let g:solarized_italic = 0
 
   " Windows has a nasty habit of launching gVim in the wrong working directory
   cd D:/home/bbayer
