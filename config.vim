@@ -136,7 +136,7 @@ endif
 " Sounds
 " ---------------
 set noerrorbells
-set novisualbell
+set visualbell " Turn off beeps
 set t_vb=
 
 " ---------------
