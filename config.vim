@@ -77,12 +77,13 @@ set switchbuf=useopen  " Switch to an existing buffer if one exists
 " ---------------
 " Text Format
 " ---------------
+set backspace=indent,eol,start " Delete everything with backspace
+
 if has('win32') || has('win64')
   set tabstop=3
 else
   set tabstop=2
 endif
-set backspace=indent,eol,start " Delete everything with backspace
 if has('win32') || has('win64')
   set shiftwidth=3 " Tabs under smart indent
 else
