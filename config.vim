@@ -29,9 +29,6 @@ endif
 " ---------------
 set ruler          " Ruler on
 set number         " Line numbers on
-if has('win32') || has('win64')
-  set nowrap         " Line wrapping off
-endif
 set laststatus=2   " Always show the statusline
 set cmdheight=2    " Make the command area two lines high
 set encoding=utf-8
