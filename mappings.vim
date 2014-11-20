@@ -169,6 +169,10 @@ nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>
 
 " Close the current window
 nnoremap <silent> <m-w> :close<CR>
+
+" Reselect the text that was just pasted
+nnoremap <leader>v V`]
+
 " ---------------
 " Typo Fixes
 " ---------------
