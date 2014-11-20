@@ -65,6 +65,10 @@ vnoremap / /\v
 " Don't move on *
 nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>
 
+" Use TAB for jump to match
+nnoremap <tab> %
+vnoremap <tab> %
+
 " ---------------
 " Window Movement
 " ---------------
