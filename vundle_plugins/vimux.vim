@@ -4,7 +4,7 @@ if exists('g:vundle_installing_plugins')
 endif
 
 let g:VimuxUseNearestPane = 1
-nnoremap <leader>a :call VimuxRunCommand("spring rspec --fail-fast")<CR>
+" nnoremap <leader>a :call VimuxRunCommand("spring rspec --fail-fast")<CR>
 nnoremap <leader>A :call VimuxRunCommand("spring rspec")<CR>
 nnoremap <leader>cu :call VimuxRunCommand("spring cucumber")<CR>
 nnoremap <leader>ca :call VimuxRunCommand("spring cucumber; spring rspec")<CR>
