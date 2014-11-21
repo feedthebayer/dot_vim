@@ -128,7 +128,7 @@ vnoremap <C-k> 15gkzz
 noremap <leader>cd :lcd %:p:h<CR>:pwd<CR>
 
 " Clear search
-noremap <silent><leader>/ :nohls<CR>:call clearmatches()<cr>
+noremap <silent><leader>/ :nohls<CR>
 
 " Highlight search word under cursor without jumping to next
 nnoremap <leader>h *<C-O>
@@ -153,7 +153,7 @@ nnoremap <silent> <leader>uul :t.\|s/./=/\|:nohls<cr>
 "          # --------
 "          # Test 123
 "          # --------
-nnoremap <silent> <leader>cul :normal "lyy"lpwv$r-^"lyyk"lP<cr>
+nnoremap <silent> <leader>cul :normal "lyy"lpwvLr-^"lyyk"lP<cr>
 
 " Format the entire file
 nnoremap <leader>fef mx=ggG='x
