@@ -71,6 +71,7 @@ vnoremap <tab> %
 nnoremap <silent> gh :WriteBufferIfNecessary<CR>:wincmd h<CR>
 nnoremap <silent> gj :WriteBufferIfNecessary<CR>:wincmd j<CR>
 nnoremap <silent> gk :WriteBufferIfNecessary<CR>:wincmd k<CR>
+nnoremap <silent> <M-k> :wincmd k<CR>
 nnoremap <silent> gl :WriteBufferIfNecessary<CR>:wincmd l<CR>
 
 " Toggle fullscreen on Windows using
