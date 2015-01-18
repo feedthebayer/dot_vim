@@ -22,7 +22,7 @@ Now you have a choice. The automated script or the manual process.
 
 **or**
 
-1. `rake vim:link` to make the .vimrc symbolic link.
+1. `rake vim:link` to make the `.vimrc` and `.nvimrc` symbolic links.
 2. Install [Vundle](https://github.com/gmarik/vundle) with `git clone
    http://github.com/gmarik/vundle.git bundle/vundle`
 3. `vim +PluginInstall +qall`
@@ -40,8 +40,11 @@ Now you have a choice. The automated script or the manual process.
 
 ### On OSX
 
-* [MacVim](https://github.com/b4winckler/macvim) - I'm currently using
 [snapshot 73](https://github.com/b4winckler/macvim/releases) on OSX 10.10 Yosemite.
+* [NeoVim](https://github.com/neovim/neovim) or
+  [MacVim](https://github.com/b4winckler/macvim) - I'm currently using NeoVim
+  [via Homebrew](https://github.com/neovim/neovim/wiki/Installing) on OS X
+  Yosemite.
 
 ### On Windows
 
