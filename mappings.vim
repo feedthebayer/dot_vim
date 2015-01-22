@@ -26,7 +26,7 @@ noremap <Right> <nop>
 " ---------------
 
 " Yank entire buffer with gy
-nnoremap gy :%y+<cr>
+nnoremap gy :0,$ y<cr>
 
 " Select entire buffer
 nnoremap vy ggVG
