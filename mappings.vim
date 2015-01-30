@@ -65,6 +65,10 @@ nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(st
 nnoremap <tab> %
 vnoremap <tab> %
 
+" Navigate by display line instead of file line
+nnoremap <silent> j gj
+nnoremap <silent> k gk
+
 " ---------------
 " Window Movement
 " ---------------
