@@ -72,8 +72,8 @@ dependencies.
 
 ## Mappings
 
-* Typing `jk` insert mode is equivalent to `Escape`.
 * Pressing `enter` in normal mode saves the current buffer.
+* `,cd` to change directory to that of the current file.
 
 And many more. See [`mappings.vim`](mappings.vim) and
 [`vundle_plugins`](vundle_plugins) for more.
