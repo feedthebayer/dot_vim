@@ -2,10 +2,10 @@
 " Mappings
 " ----------------------------------------
 
-" Set leader to ,
+" Set leader to <space>
 " Note: This line MUST come before any <leader> mappings
-let mapleader=","
-let maplocalleader = "\\"
+let mapleader=" "
+let maplocalleader = ","
 
 " -----------------------
 " Unmapped While Learning
@@ -138,11 +138,11 @@ noremap <silent><leader>/ :nohls<CR>
 " Highlight search word under cursor without jumping to next
 nnoremap <leader>h *<C-O>
 
-" Toggle spelling mode with ,s
+" Toggle spelling mode with <leader>s
 nnoremap <silent> <leader>s :set spell!<CR>
 
 " Quickly switch to last buffer
-nnoremap <leader>, :e#<CR>
+nnoremap <leader><space> :e#<CR>
 
 " Underline the current line with '-'
 nnoremap <silent> <leader>ul :t.\|s/./-/\|:nohls<cr>
