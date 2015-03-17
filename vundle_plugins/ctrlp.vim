@@ -14,11 +14,6 @@ let g:ctrlp_reuse_window = 'startify'
 let g:ctrlp_mruf_max = 350
 let g:ctrlp_mruf_default_order = 0
 
-if has('win32') || has('win64')
-  let g:ctrlp_by_filename = 1
-  let g:ctrlp_regexp = 1
-endif
-
 " Leader Commands
 nnoremap <leader>t :CtrlPTag<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
