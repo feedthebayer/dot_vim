@@ -36,11 +36,7 @@ set encoding=utf-8
 set noshowmode     " Don't show the mode since Powerline shows it
 set title          " Set the title of the window in the terminal to the file
 if exists('+colorcolumn')
-  if has('win32') || has('win64')
-    set colorcolumn=110 " Color the 110th column differently as a wrapping guide.
-  else
-    set colorcolumn=80 " Color the 80th column differently as a wrapping guide.
-  endif
+   set colorcolumn=80 " Color the 80th column differently as a wrapping guide.
 endif
 " Disable tooltips for hovering keywords in Vim
 if exists('+ballooneval')
