@@ -4,10 +4,10 @@ Version 3! Now each plugin is included and managed in its
 [own file](vundle_plugins)!
 
 [![gVim][ss1]][ss1]
-[![iTerm][ss2]][ss2]
+[![MacVim][ss2]][ss2]
 
 [ss1]: https://github.com/feedthebayer/dot_vim/raw/master/screenshots/gVim.png
-[ss2]: https://github.com/mutewinter/dot_vim/raw/master/screenshots/iTerm.png
+[ss2]: https://github.com/mutewinter/dot_vim/raw/master/screenshots/MacVim.png
 
 ## Installation
 

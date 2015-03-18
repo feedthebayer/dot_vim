@@ -3,7 +3,7 @@
 " Description: The Vim Configuration of Champions
 " Version: 3.0 - Now each plugin is included and managed in its own file!
 " =============================================================================
-
+"
 " All of the plugins are installed with Vundle from this file.
 source ~/.vim/vundle.vim
 
