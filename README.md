@@ -52,28 +52,29 @@ Now you have a choice. The automated script or the manual process.
 Here's a list of plugins that require further installation or have
 dependencies.
 
-* [Fugitive](https://github.com/tpope/vim-fugitive) Requires Git to be
-  installed.
-* [syntastic](https://github.com/scrooloose/syntastic) Requires many different
-  binaries installed depending on what filetypes you want it to check. See the
-  [FAQ](https://github.com/scrooloose/syntastic#faq) for more information.
-* [OSX only] [Ag.vim](https://github.com/rking/ag.vim) Requires
-  [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) to be
-  installed.
-* [OSX only] [Source Code for Powerline](http://git.io/H3fYBg) The custom font I'm using
-  for vim-airline.
-* [Windows only] [Source Code Pro](http://store1.adobe.com/cfusion/store/html/index.cfm?event=displayFontPackage&code=1960) The font I'm using on Windows.
-* [OSX only] [CtrlP C Matching Extension](https://github.com/JazzCore/ctrlp-cmatcher)
-  requires compilation. See the steps [in its
-  readme](https://github.com/JazzCore/ctrlp-cmatcher).
-* [underscore-cli](https://github.com/ddopson/underscore-cli) for sweet JSON
-  formatting.
-* [OSX only] [YouCompleteMe](https://github.com/blueyed/YouCompleteMe) requires compilation according to the instructions in it's readme.
+### OSX & Windows
+
+* [Fugitive](https://github.com/tpope/vim-fugitive) Requires Git to be installed.
+
+### OSX Only
+
+* [Ag.vim](https://github.com/rking/ag.vim) Requires
+  [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) to be installed.
+* [Source Code for Powerline](http://git.io/H3fYBg) The custom font I'm using for vim-airline.
+* [YouCompleteMe](https://github.com/blueyed/YouCompleteMe) requires compilation according to the
+  instructions in it's readme.
+
+### Windows Only
+
+* [Source Code Pro](http://store1.adobe.com/cfusion/store/html/index.cfm?event=displayFontPackage&code=1960)
+  The font I'm using on Windows.
 
 ## Mappings
 
 * Pressing `enter` in normal mode saves the current buffer.
-* `,cd` to change directory to that of the current file.
+* `<space>cd` to change directory to that of the current file.
+* `<space><space>` to switch to previous buffer
+* `<space>c` to un/comment the current line or visual selection
 
 And many more. See [`mappings.vim`](mappings.vim) and
 [`vundle_plugins`](vundle_plugins) for more.
@@ -96,6 +97,10 @@ let g:move_key_modifier = 'C'
 ```
 
 This example installs [`vim-move`](https://github.com/matze/vim-move).
+
+This is also an excellent place to put machine specific configuration. For example, I have a `windows.vim`
+file in `vundle_plugins/custom` where I have some config that I use on Windows at work but don't want
+on OSX at home.
 
 ## Plugin List
 
