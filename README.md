@@ -7,7 +7,7 @@ Version 3! Now each plugin is included and managed in its
 [![MacVim][ss2]][ss2]
 
 [ss1]: https://github.com/feedthebayer/dot_vim/raw/master/screenshots/gVim.png
-[ss2]: https://github.com/mutewinter/dot_vim/raw/master/screenshots/MacVim.png
+[ss2]: https://github.com/feedthebayer/dot_vim/raw/master/screenshots/MacVim.png
 
 ## Installation
 
