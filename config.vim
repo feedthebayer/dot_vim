@@ -28,8 +28,8 @@ endif
 " UI
 " ---------------
 set ruler          " Ruler on
-set number         " Line numbers on
-set relativenumber " Use hybrid line numbers (show current & relative)
+set relativenumber " Use hybrid line numbers (enable relative numbers)
+set number         " Use hybrid line numbers (enable current number for current line)
 set laststatus=2   " Always show the statusline
 set cmdheight=2    " Make the command area two lines high
 set encoding=utf-8
