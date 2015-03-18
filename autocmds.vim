@@ -45,8 +45,12 @@ if has("autocmd")
     " from https://bitbucket.org/sjl/dotfiles/src/tip/vim/vimrc
     au VimResized * :wincmd =
 
-    " Show normal line numbers in insert mode and relative numbers in normal mode
+    " Show normal line numbers when focused and when in insert mode
     autocmd InsertEnter * :set norelativenumber
+    autocmd FocusLost * :set norelativenumber
+    " Show relative numbers when not focused or in normal mode
     autocmd InsertLeave * :set relativenumber
+    autocmd FocusGained * :set relativenumber
+
   augroup END
 endif
