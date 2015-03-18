@@ -21,7 +21,7 @@ if has('win32') || has('win64')
   let g:solarized_italic = 0
 
   " Windows has a nasty habit of launching gVim in the wrong working directory
-  cd D:/home/bbayer
+  cd ~
 elseif has('gui_macvim')
   " MacVim
 
