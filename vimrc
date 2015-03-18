@@ -24,3 +24,8 @@ source ~/.vim/plugins.vim
 source ~/.vim/functions.vim
 " Auto commands.
 source ~/.vim/autocmds.vim
+
+" Source custom local config files last to ensure they override previous settings
+for file in split(glob('$HOME/.vim/vundle_plugins/custom/*.vim'), '\n')
+  exe 'source' fnameescape(file)
+endfor
