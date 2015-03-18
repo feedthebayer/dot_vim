@@ -20,7 +20,6 @@ noremap <Right> <nop>
 " No-op ^ and $ while learning H and L
 noremap ^ <nop>
 noremap $ <nop>
-nnoremap <leader>sc <nop>
 
 " ---------------
 " Regular Mappings
@@ -119,11 +118,7 @@ vnoremap <C-k> 15gkzz
 " Insert Mode Mappings
 " ---------------
 
-" Let's make escape better, together.
-" inoremap jk <Esc>
-" inoremap JK <Esc>
-" inoremap Jk <Esc>
-" inoremap jK <Esc>
+" NOTE - I remap my keyboard control key to trigger ESC when not combined with  another key
 
 " ---------------
 " Leader Mappings
