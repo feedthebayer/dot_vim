@@ -3,4 +3,4 @@ if exists('g:vundle_installing_plugins')
   finish
 endif
 
-imap <leader>h <C-y>,
+let g:user_emmet_leader_key='<C-Q>'
