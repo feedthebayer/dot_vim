@@ -44,5 +44,9 @@ if has("autocmd")
     " Resize splits when the window is resized
     " from https://bitbucket.org/sjl/dotfiles/src/tip/vim/vimrc
     au VimResized * :wincmd =
+
+    " Show normal line numbers in insert mode and relative numbers in normal mode
+    autocmd InsertEnter * :set norelativenumber
+    autocmd InsertLeave * :set relativenumber
   augroup END
 endif
