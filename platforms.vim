@@ -6,10 +6,10 @@ if has('win32') || has('win64')
   " Windows
   source $VIMRUNTIME/mswin.vim
   set guifont=Source\ Code\ Pro\ Semibold:h10.5
-  set guioptions-=T " Toolbar
-  set guioptions-=m " Menubar
-  set guioptions-=r " Right scrollbar
-  set guioptions-=L " Left scrollbar
+  set guioptions-=T " Hide Toolbar
+  set guioptions-=m " Hide Menubar
+  set guioptions-=r " Hide Right scrollbar
+  set guioptions-=L " Hide Left scrollbar
 
   " Set height and width on Windows
   set lines=62
