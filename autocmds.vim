@@ -50,7 +50,7 @@ if has("autocmd")
     autocmd FocusLost * :set norelativenumber
     " Show relative numbers when not focused or in normal mode
     autocmd InsertLeave * :set relativenumber
-    autocmd FocusGained * :set relativenumber
+    autocmd FocusGained * if &modifiable | :set relativenumber | endif
 
   augroup END
 endif
