@@ -5,4 +5,4 @@ endif
 
 
 " Easily start an Ack search
-nnoremap <leader>a :Ack!
+nnoremap <leader>a :Ack!<space>
