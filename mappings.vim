@@ -135,7 +135,7 @@ nnoremap <leader>h *<C-O>
 nnoremap <silent> <leader>s :set spell!<CR>
 
 " Quickly switch to last buffer
-nnoremap <leader><space> :e#<CR>
+nnoremap <leader><leader> :e#<CR>
 
 " Underline the current line with '-'
 nnoremap <silent> <leader>ul :t.\|s/./-/\|:nohls<cr>
