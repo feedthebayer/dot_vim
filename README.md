@@ -40,7 +40,6 @@ Now you have a choice. The automated script or the manual process.
 
 ### On OSX
 
-[snapshot 73](https://github.com/b4winckler/macvim/releases) on OSX 10.10 Yosemite.
 * [NeoVim](https://github.com/neovim/neovim) or
   [MacVim](https://github.com/b4winckler/macvim) - I'm currently using NeoVim
   [via Homebrew](https://github.com/neovim/neovim/wiki/Installing) on OS X
