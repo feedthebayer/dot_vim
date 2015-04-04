@@ -64,7 +64,11 @@ set clipboard+=unnamed " Yanks go on clipboard instead.
 set autowrite          " Writes on make/shell commands
 set timeoutlen=450     " Time to wait for a command (after leader for example).
 set ttimeout
-set ttimeoutlen=100    " Time to wait for a command (after leader for example).
+if has('nvim')
+  set ttimeoutlen=-1   " Neovim handles ESC as alt+key, this solves problem
+else
+  set ttimeoutlen=100 " Time to wait for a command (after leader for example).
+endif
 set nofoldenable       " Disable folding entirely.
 set foldlevelstart=99  " I really don't like folds.
 set formatoptions=crql
