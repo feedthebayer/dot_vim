@@ -21,7 +21,7 @@ if has('win32') || has('win64')
   let g:airline_symbols.branch = ''
   let g:airline_symbols.paste = 'Þ'
   let g:airline_symbols.whitespace = '•'
-elseif has('gui_macvim')
+else
   let g:airline_powerline_fonts = 1
 endif
 let g:airline_detect_modified = 1
