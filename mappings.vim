@@ -77,6 +77,13 @@ nnoremap <silent> gk :WriteBufferIfNecessary<CR>:wincmd k<CR>
 nnoremap <silent> <M-k> :wincmd k<CR>
 nnoremap <silent> gl :WriteBufferIfNecessary<CR>:wincmd l<CR>
 
+if has('nvim')
+  tnoremap <silent> gh <c-\><c-n>:wincmd h<CR>
+  tnoremap <silent> gj <c-\><c-n>:wincmd j<CR>
+  tnoremap <silent> gk <c-\><c-n>:wincmd k<CR>
+  " tnoremap <silent> gl <c-\><c-n>:wincmd l<CR>
+end
+
 " Toggle fullscreen on Windows using
 " http://www.vim.org/scripts/script.php?script_id=2596
 if has('win32') || has('win64')
@@ -100,6 +107,14 @@ nnoremap <silent> gp :wincmd p<CR>
 nnoremap <silent> g= :wincmd =<CR>
 " Swap Windows
 nnoremap <silent> gx :wincmd x<CR>
+
+if has('nvim')
+  " Easily exit insert mode when in terminal
+  tnoremap <c-n> <c-\><c-n>
+
+  " Easily close terminal window
+  tnoremap <c-w>c <c-\><c-n>:close<CR>
+endif
 
 " ---------------
 " Modifer Mappings
@@ -170,6 +185,11 @@ nnoremap <silent> <m-w> :close<CR>
 
 " Reselect the text that was just pasted
 nnoremap <leader>v V`]
+
+if has('nvim')
+  " Open terminal in a vertical split
+  noremap <leader>tt :vsplit<Bar>:wincmd l<CR>:term<CR>
+endif
 
 " ---------------
 " Typo Fixes
