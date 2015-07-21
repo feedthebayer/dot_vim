@@ -1,5 +1,5 @@
-" Only use on Mac because YCM has no official Windows support
-if has('macunix') || has('mac')
+" Don't use on Windows because no official Windows support
+if !has('win32') && !has('win64')
   if exists('g:vundle_installing_plugins')
     Plugin 'blueyed/YouCompleteMe'
     finish

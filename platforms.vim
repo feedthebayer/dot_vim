@@ -36,6 +36,9 @@ elseif has('gui_macvim')
 
   " Use option (alt) as meta key.
   set macmeta
+" LINUX
+elseif !has('macunix') && !has('mac')
+  set clipboard+=unnamedplus
 endif
 
 if !has('nvim') && (has('macunix') || has('mac'))
