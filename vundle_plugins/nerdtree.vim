@@ -10,6 +10,7 @@ nnoremap <silent><leader>nf :NERDTreeFind<CR>:wincmd =<CR>
 let g:NERDTreeChDirMode = 2
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeShowBookmarks = 1
+let g:NERDTreeForceMac = 1
 
 " Unmap so that C-J & C-K work like in rest of vim
 let g:NERDTreeMapJumpNextSibling = "<nop>"
