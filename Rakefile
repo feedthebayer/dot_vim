@@ -37,14 +37,17 @@ namespace :vim do
       end
 
       # Special link for neovim
-      dot_file = File.expand_path("~/.config/nvim")
-      config_dir = File.expand_path(".")
-      Dir.mkdir(File.expand_path("~/.config"))
-      if File.exists? dot_file
-        puts "#{dot_file} already exists, skipping link."
+      config_dir = File.expand_path("~/.config")
+      nvim_dir = File.expand_path("~/.config/nvim")
+      vim_dir = File.expand_path(".")
+      unless Dir.exists?(config_dir)
+        Dir.mkdir(File.expand_path("~/.config"))
+      end
+      if File.exists? nvim_dir
+        puts "#{nvim_dir} already exists, skipping link."
       else
-        File.symlink(config_dir, dot_file)
-        puts "Created link from #{dot_file} to #{config_dir}"
+        File.symlink(vim_dir, nvim_dir)
+        puts "Created link from #{nvim_dir} to #{vim_dir}"
       end
     rescue NotImplementedError
       puts "File.symlink not supported, you must do it manually."
