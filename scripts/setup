@@ -36,15 +36,15 @@ fi
 
 info 'Installing plugins'
 info '-------------------------------------------------'
-if test $(which mvim)
+if test $(which nvim)
 then
-  mvim -v +PluginInstall +qall
+  nvim --headless +PluginInstall +qall
 else
   if test $(which vim)
   then
     vim +PluginInstall +qall
   else
-    fail 'mvim or vim not found in path.'
+    fail 'nvim or vim not found in path.'
   fi
 fi
 
