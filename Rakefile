@@ -39,6 +39,7 @@ namespace :vim do
       # Special link for neovim
       dot_file = File.expand_path("~/.config/nvim")
       config_dir = File.expand_path(".")
+      Dir.mkdir(File.expand_path("~/.config"))
       if File.exists? dot_file
         puts "#{dot_file} already exists, skipping link."
       else

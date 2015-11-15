@@ -22,7 +22,7 @@ Now you have a choice. The automated script or the manual process.
 
 **or**
 
-1. `rake vim:link` to make the `.vimrc` and `.nvimrc` symbolic links.
+1. `rake vim:link` to make the `.vimrc` and `~/.config/nvim` symbolic links.
 2. Install [Vundle](https://github.com/gmarik/vundle) with `git clone
    http://github.com/gmarik/vundle.git bundle/vundle`
 3. `vim +PluginInstall +qall`
