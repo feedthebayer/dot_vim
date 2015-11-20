@@ -32,6 +32,7 @@ set relativenumber " Use hybrid line numbers (enable relative numbers)
 set number         " Use hybrid line numbers (enable current number for current line)
 set laststatus=2   " Always show the statusline
 set cmdheight=2    " Make the command area two lines high
+set cursorline     " Highlight current line
 set encoding=utf-8
 set noshowmode     " Don't show the mode since Powerline shows it
 set title          " Set the title of the window in the terminal to the file
