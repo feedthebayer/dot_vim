@@ -6,14 +6,14 @@ Version 3! Now each plugin is included and managed in its
 [![gVim][ss1]][ss1]
 [![MacVim][ss2]][ss2]
 
-[ss1]: https://github.com/feedthebayer/dot_vim/raw/master/screenshots/gVim.png
-[ss2]: https://github.com/feedthebayer/dot_vim/raw/master/screenshots/MacVim.png
+[ss1]: https://github.com/flybayer/dot_vim/raw/master/screenshots/gVim.png
+[ss2]: https://github.com/flybayer/dot_vim/raw/master/screenshots/MacVim.png
 
 ## Installation
 
 ### On OSX
 
-1. `git clone http://github.com/feedthebayer/dot_vim.git ~/.vim`.
+1. `git clone http://github.com/flybayer/dot_vim.git ~/.vim`.
 2. `cd ~/.vim`.
 
 Now you have a choice. The automated script or the manual process.
@@ -29,7 +29,7 @@ Now you have a choice. The automated script or the manual process.
 
 ### On Windows
 
-1. `git clone http://github.com/feedthebayer/dot_vim.git %USERPROFILE%\.vim`.
+1. `git clone http://github.com/flybayer/dot_vim.git %USERPROFILE%\.vim`.
 2. `cd %USERPROFILE%\.vim`.
 2. `mklink %USERPROFILE%\.vimrc %USERPROFILE%\.vim\vimrc` to make the .vimrc symbolic link.
 3. Install [Vundle](https://github.com/gmarik/vundle) with `git clone
