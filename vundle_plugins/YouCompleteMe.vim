@@ -1,7 +1,7 @@
 " Don't use on Windows because no official Windows support
 if !has('win32') && !has('win64')
   if exists('g:vundle_installing_plugins')
-    Plugin 'blueyed/YouCompleteMe'
+    Plugin 'Valloric/YouCompleteMe'
     finish
   endif
 
@@ -12,4 +12,10 @@ if !has('win32') && !has('win64')
       \ 'ruby' : 1,
       \ 'javascript' : 1,
       \}
+
+  let g:ycm_semantic_triggers =  {
+    \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+    \   'ruby' : ['.', '::'],
+    \ }
 endif
+
