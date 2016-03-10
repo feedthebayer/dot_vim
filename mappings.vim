@@ -169,8 +169,8 @@ nnoremap <leader>jt <Esc>:%!underscore print<CR><Esc>:set filetype=json<CR>
 nnoremap <leader>jts <Esc>:%!underscore print --strict<CR><Esc>:set filetype=json<CR>
 
 " Split window vertically or horizontally *and* switch to the new split!
-nnoremap <silent> <leader>hs :split<Bar>:wincmd j<CR>:wincmd =<CR>
-nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>:wincmd =<CR>
+nnoremap <silent> <leader>s- :split<Bar>:wincmd j<CR>:wincmd =<CR>
+nnoremap <silent> <leader>s\ :vsplit<Bar>:wincmd l<CR>:wincmd =<CR>
 
 " Close the current window
 nnoremap <silent> <m-w> :close<CR>
@@ -185,9 +185,9 @@ nnoremap <leader>v V`]
 
 if has('nvim')
   " Open terminal in a vertical split and switch to it
-  noremap <leader>tv :vsplit<Bar>:wincmd l<CR>:term<CR>
+  noremap <leader>t\ :vsplit<Bar>:wincmd l<CR>:term<CR>
   " Open terminal in a horizontal split and switch to it
-  noremap <leader>th :40split<Bar>:wincmd j<CR>:term<CR>
+  noremap <leader>t- :40split<Bar>:wincmd j<CR>:term<CR>
 endif
 
 " ---------------
