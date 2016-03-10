@@ -83,16 +83,8 @@ set switchbuf=useopen  " Switch to an existing buffer if one exists
 " ---------------
 set backspace=indent,eol,start " Delete everything with backspace
 
-if has('win32') || has('win64')
-  set tabstop=3
-else
-  set tabstop=2
-endif
-if has('win32') || has('win64')
-  set shiftwidth=3 " Tabs under smart indent
-else
-  set shiftwidth=2 " Tabs under smart indent
-endif
+set tabstop=2
+set shiftwidth=2 " Tabs under smart indent
 set shiftround
 set cindent
 set autoindent
