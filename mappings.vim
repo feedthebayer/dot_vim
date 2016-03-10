@@ -67,17 +67,16 @@ nnoremap <silent> k gk
 " ---------------
 " Window Movement
 " ---------------
-nnoremap <silent> gh :WriteBufferIfNecessary<CR>:wincmd h<CR>
-nnoremap <silent> gj :WriteBufferIfNecessary<CR>:wincmd j<CR>
-nnoremap <silent> gk :WriteBufferIfNecessary<CR>:wincmd k<CR>
-nnoremap <silent> <M-k> :wincmd k<CR>
-nnoremap <silent> gl :WriteBufferIfNecessary<CR>:wincmd l<CR>
+nnoremap <silent> <M-h> :WriteBufferIfNecessary<CR>:wincmd h<CR>
+nnoremap <silent> <M-j> :WriteBufferIfNecessary<CR>:wincmd j<CR>
+nnoremap <silent> <M-k> :WriteBufferIfNecessary<CR>:wincmd k<CR>
+nnoremap <silent> <M-l> :WriteBufferIfNecessary<CR>:wincmd l<CR>
 
 if has('nvim')
-  tnoremap <silent> gh <c-\><c-n>:wincmd h<CR>
-  tnoremap <silent> gj <c-\><c-n>:wincmd j<CR>
-  tnoremap <silent> gk <c-\><c-n>:wincmd k<CR>
-  " tnoremap <silent> gl <c-\><c-n>:wincmd l<CR>
+  tnoremap <silent> <M-h> <c-\><c-n>:wincmd h<CR>
+  tnoremap <silent> <M-j> <c-\><c-n>:wincmd j<CR>
+  tnoremap <silent> <M-k> <c-\><c-n>:wincmd k<CR>
+  tnoremap <silent> <M-l> <c-\><c-n>:wincmd l<CR>
 end
 
 " Toggle fullscreen on Windows using
@@ -107,9 +106,6 @@ nnoremap <silent> gx :wincmd x<CR>
 if has('nvim')
   " Easily exit insert mode when in terminal
   tnoremap <c-n> <c-\><c-n>
-
-  " Easily close terminal window
-  tnoremap <c-w>c <c-\><c-n>:close<CR>
 endif
 
 " ---------------
@@ -178,6 +174,11 @@ nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>:wincmd =<CR>
 
 " Close the current window
 nnoremap <silent> <m-w> :close<CR>
+
+if has('nvim')
+  " Easily close terminal window
+  tnoremap <silent> <m-w> <c-\><c-n>:close<CR>
+endif
 
 " Reselect the text that was just pasted
 nnoremap <leader>v V`]
