@@ -67,7 +67,7 @@ set ttimeout
 if has('nvim')
   set ttimeoutlen=-1   " Neovim handles ESC as alt+key, this solves problem
 else
-  set ttimeoutlen=100 " Time to wait for a command (after leader for example).
+  set ttimeoutlen=100 " Time to wait for a key sequence
 endif
 set nofoldenable       " Disable folding entirely.
 set foldlevelstart=99  " I really don't like folds.
