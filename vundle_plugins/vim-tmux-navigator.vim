@@ -4,6 +4,7 @@ if exists('g:vundle_installing_plugins')
 endif
 
 let g:tmux_navigator_no_mappings = 1
+let g:tmux_navigator_save_on_switch = 1
 
 nnoremap <silent> <M-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <M-j> :TmuxNavigateDown<cr>
