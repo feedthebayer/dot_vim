@@ -165,7 +165,7 @@ nnoremap <leader>fef mx=ggG='x
 
 " Format a json file with Underscore CLI
 " Inspirited by https://github.com/spf13/spf13-vim/blob/3.0/.vimrc#L390
-nnoremap <leader>jt <Esc>:%!underscore print<CR><Esc>:set filetype=json<CR>
+nnoremap <leader>fj <Esc>:%!underscore print<CR><Esc>:set filetype=json<CR>
 
 " Split window vertically or horizontally *and* switch to the new split!
 nnoremap <silent> <leader>s- :split<Bar>:wincmd j<CR>:wincmd =<CR>
@@ -181,6 +181,9 @@ endif
 
 " Reselect the text that was just pasted
 nnoremap <leader>v V`]
+
+" Paste and select pasted
+nnoremap <expr> gpp '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 if has('nvim')
   " Open terminal in a vertical split and switch to it
