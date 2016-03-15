@@ -7,6 +7,9 @@
 " All of the plugins are installed with Vundle from this file.
 source ~/.vim/vundle.vim
 
+" All of the Plug plugins are installed with Plug from this file.
+source ~/.vim/plug.vim
+
 " Automatically detect file types. (must turn on after Vundle)
 filetype plugin indent on
 
@@ -29,3 +32,7 @@ source ~/.vim/autocmds.vim
 for file in split(glob('$HOME/.vim/vundle_plugins/custom/*.vim'), '\n')
   exe 'source' fnameescape(file)
 endfor
+for file in split(glob('$HOME/.vim/plug_plugins/custom/*.vim'), '\n')
+  exe 'source' fnameescape(file)
+endfor
+

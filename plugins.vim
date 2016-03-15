@@ -2,3 +2,6 @@
 for file in split(glob('~/.vim/vundle_plugins/*.vim'), '\n')
   exe 'source' file
 endfor
+for file in split(glob('~/.vim/plug_plugins/*.vim'), '\n')
+  exe 'source' file
+endfor
