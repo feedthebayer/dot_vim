@@ -52,5 +52,9 @@ if has("autocmd")
     autocmd InsertLeave * :set relativenumber
     autocmd FocusGained * if &modifiable | :set relativenumber | endif
 
+    " Automatically close terminal buffers that have ended
+    " (no more [Process exited 0] !!)
+    autocmd TermClose * call feedkeys('<cr>')
+
   augroup END
 endif

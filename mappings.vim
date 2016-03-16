@@ -174,11 +174,6 @@ nnoremap <silent> <leader>s\ :vsplit<Bar>:wincmd l<CR>:wincmd =<CR>
 " Close the current window
 nnoremap <silent> <m-w> :close<CR>
 
-if has('nvim')
-  " Easily close terminal window
-  tnoremap <silent> <m-w> <c-\><c-n>:close<CR>
-endif
-
 " Reselect the text that was just pasted
 nnoremap <leader>v V`]
 
@@ -189,7 +184,7 @@ if has('nvim')
   " Open terminal in a vertical split and switch to it
   noremap <leader>t\ :vsplit<Bar>:wincmd l<CR>:term<CR>
   " Open terminal in a horizontal split and switch to it
-  noremap <leader>t- :40split<Bar>:wincmd j<CR>:term<CR>
+  noremap <leader>t- :35split<Bar>:wincmd j<CR>:term<CR>
 endif
 
 " ---------------
