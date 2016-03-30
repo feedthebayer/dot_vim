@@ -15,12 +15,12 @@ let g:EasyMotion_use_smartsign_us = 1
 " Bi-directional find motion
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
 " `s{char}{label}`
-nmap s <Plug>(easymotion-s)
-vmap s <Plug>(easymotion-s)
+nmap z <Plug>(easymotion-s)
+vmap z <Plug>(easymotion-s)
 
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
 " Require tpope/vim-repeat to enable dot repeat support
-" `s<CR>` repeat last find motion.
-nmap s <Plug>(easymotion-s)
+" `z<CR>` repeat last find motion.
+nmap z <Plug>(easymotion-s)
