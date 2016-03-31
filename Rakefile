@@ -14,51 +14,9 @@ README_FILE = 'README.md'
 VUNDLE_PLUGINS_FOLDER = 'vundle_plugins'
 LINES_WITHOUT_CONFIG = 4
 PLUGINS_HEADER = <<-HEADER.chomp
-| Stars___ | **Plugin** | **Description** |
-| -------: | :--------- | :-------------- |
+| Stars____ | **Plugin** | **Description** |
+| --------: | :--------- | :-------------- |
 HEADER
-
-FILES_TO_LINK = %w{vimrc gvimrc}
-
-task :default => ['vim:link']
-
-namespace :vim do
-  desc 'Create symlinks'
-  task :link do
-    begin
-      FILES_TO_LINK.each do |file|
-        dot_file = File.expand_path("~/.#{file}")
-        if File.exists? dot_file
-          puts "#{dot_file} already exists, skipping link."
-        else
-          File.symlink(".vim/#{file}", dot_file)
-          puts "Created link for #{file} in your home folder."
-        end
-      end
-
-      # Special link for neovim
-      config_dir = File.expand_path("~/.config")
-      nvim_dir = File.expand_path("~/.config/nvim")
-      vim_dir = File.expand_path(".")
-      unless Dir.exists?(config_dir)
-        Dir.mkdir(File.expand_path("~/.config"))
-      end
-      if File.exists? nvim_dir
-        puts "#{nvim_dir} already exists, skipping link."
-      else
-        File.symlink(vim_dir, nvim_dir)
-        puts "Created link from #{nvim_dir} to #{vim_dir}"
-      end
-    rescue NotImplementedError
-      puts "File.symlink not supported, you must do it manually."
-      if RUBY_PLATFORM.downcase =~ /(mingw|win)(32|64)/
-        puts 'Windows 7 use mklink, e.g.'
-        puts '  mklink _vimrc .vim\vimrc'
-      end
-    end
-
-  end
-end
 
 desc 'Update the list of plugins in README.md'
 task :update_readme do
@@ -70,7 +28,6 @@ end
 # ----------------------------------------
 # Helper Methods
 # ----------------------------------------
-
 
 # Just takes an array of strings that resolve to plugins from Vundle
 def add_plugins_to_readme(plugins = [])
@@ -85,7 +42,7 @@ def add_plugins_to_readme(plugins = [])
       .reverse
       .map{|p| table_row(p) }
     lines.insert(index+2, plugin_rows)
-    lines << "\n_That's #{plugins.length} plugins, holy crap._"
+    lines << "\n_That's #{plugins.length} plugins!_"
     lines << "\n_#{PLUGIN_LIST_NOTE} on #{Time.now.strftime('%Y/%m/%d')}._\n\n"
     write_lines_to_readme(lines)
   else
@@ -187,8 +144,8 @@ def repo_info(user, name)
   # Without a GitHub Client / Secret token you will only be able to make 60
   # requests per hour, meaning you can only update the readme once.
   # Read more here http://developer.github.com/v3/#rate-limiting.
-  if ENV['GITHUB_CLIENT_ID'] and ENV['GITHUB_CLIENT_SECRET']
-    api_url += "?client_id=#{ENV['GITHUB_CLIENT_ID']}&client_secret=#{ENV['GITHUB_CLIENT_SECRET']}"
+  if ENV['GITHUB_OAUTH_TOKEN'] 
+    api_url += "?access_token=#{ENV['GITHUB_OAUTH_TOKEN']}"
   end
 
   begin

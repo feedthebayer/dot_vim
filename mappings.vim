@@ -72,18 +72,10 @@ nnoremap <silent> <M-j> :WriteBufferIfNecessary<CR>:wincmd j<CR>
 nnoremap <silent> <M-k> :WriteBufferIfNecessary<CR>:wincmd k<CR>
 nnoremap <silent> <M-l> :WriteBufferIfNecessary<CR>:wincmd l<CR>
 
-if has('nvim')
-  tnoremap <silent> <M-h> <c-\><c-n>:wincmd h<CR>
-  tnoremap <silent> <M-j> <c-\><c-n>:wincmd j<CR>
-  tnoremap <silent> <M-k> <c-\><c-n>:wincmd k<CR>
-  tnoremap <silent> <M-l> <c-\><c-n>:wincmd l<CR>
-end
-
-" Toggle fullscreen on Windows using
-" http://www.vim.org/scripts/script.php?script_id=2596
-if has('win32') || has('win64')
-  noremap <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
-endif
+tnoremap <silent> <M-h> <c-\><c-n>:wincmd h<CR>
+tnoremap <silent> <M-j> <c-\><c-n>:wincmd j<CR>
+tnoremap <silent> <M-k> <c-\><c-n>:wincmd k<CR>
+tnoremap <silent> <M-l> <c-\><c-n>:wincmd l<CR>
 
 "   4 Window Splits
 "
@@ -103,10 +95,8 @@ nnoremap <silent> g= :wincmd =<CR>
 " Swap Windows
 nnoremap <silent> gx :wincmd x<CR>
 
-if has('nvim')
-  " Easily exit insert mode when in terminal
-  tnoremap <c-n> <c-\><c-n>
-endif
+" Easily exit insert mode when in terminal
+tnoremap <c-n> <c-\><c-n>
 
 " ---------------
 " Modifer Mappings
@@ -180,12 +170,10 @@ nnoremap <leader>v V`]
 " Paste and select pasted
 nnoremap <expr> gpp '`[' . strpart(getregtype(), 0, 1) . '`]'
 
-if has('nvim')
-  " Open terminal in a vertical split and switch to it
-  noremap <leader>t\ :vsplit<Bar>:wincmd l<CR>:term<CR>
-  " Open terminal in a horizontal split and switch to it
-  noremap <leader>t- :35split<Bar>:wincmd j<CR>:term<CR>
-endif
+" Open terminal in a vertical split and switch to it
+noremap <leader>t\ :vsplit<Bar>:wincmd l<CR>:term<CR>
+" Open terminal in a horizontal split and switch to it
+noremap <leader>t- :35split<Bar>:wincmd j<CR>:term<CR>
 
 " ---------------
 " Typo Fixes

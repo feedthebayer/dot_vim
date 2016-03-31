@@ -27,12 +27,9 @@ git clone git://github.com/gmarik/vundle.git bundle/vundle
 
 info 'Setting up Symlinks'
 info '--------------'
-if test $(which rake)
-then
-  rake vim:link
-else
-  fail 'Install Ruby and Rake to continue'
-fi
+mkdir -p ~/.config
+ln -s ~/.vim ~/.config/nvim
+info 'Created link from ~/.config/nvim to ~/.vim'
 
 info 'Installing plugins'
 info '-------------------------------------------------'
@@ -40,12 +37,7 @@ if test $(which nvim)
 then
   nvim --headless +PluginInstall +qall
 else
-  if test $(which vim)
-  then
-    vim +PluginInstall +qall
-  else
-    fail 'nvim or vim not found in path.'
-  fi
+  fail 'nvim or vim not found in path.'
 fi
 
 success 'Setup complete. Run vim and enjoy'

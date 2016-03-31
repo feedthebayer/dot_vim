@@ -2,7 +2,6 @@
 " Vundle
 " ----------------------------------------
 
-set nocompatible " be iMproved
 filetype off     " required!
 
 set rtp+=~/.vim/bundle/vundle/
