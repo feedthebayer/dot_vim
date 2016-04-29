@@ -17,5 +17,5 @@ let g:NERDTreeMapJumpNextSibling = "<nop>"
 let g:NERDTreeMapJumpPrevSibling = "<nop>"
 
 " Close Vim if NERDTree is the last buffer
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")
-  \&& b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
+                                      \&& b:NERDTree.isTabTree()) | q | endif
