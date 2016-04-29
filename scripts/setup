@@ -21,10 +21,6 @@ info 'Setting up the Vim Configuration of Champions'
 info '============================================='
 echo ''
 
-info 'Installing Vundle'
-info '-----------------'
-git clone git://github.com/gmarik/vundle.git bundle/vundle
-
 info 'Setting up Symlinks'
 info '--------------'
 mkdir -p ~/.config
@@ -35,9 +31,9 @@ info 'Installing plugins'
 info '-------------------------------------------------'
 if test $(which nvim)
 then
-  nvim --headless +PluginInstall +qall
+  nvim --headless +PlugInstall +qall
 else
   fail 'nvim or vim not found in path.'
 fi
 
-success 'Setup complete. Run vim and enjoy'
+success 'Setup complete. Run nvim and enjoy'
