@@ -4,11 +4,13 @@ if exists('g:plug_loading_plugins')
   finish
 endif
 
+let g:fzf_command_prefix = 'Fzf'
 let g:fzf_layout = { 'down': '~10' }
+
 " Leader Commands
-nnoremap <c-p> :Files<CR>
-nnoremap <leader>t :Tags<CR>
-nnoremap <leader>b :Buffers<CR>
+nnoremap <c-p> :FzfFiles<CR>
+nnoremap <leader>t :FzfTags<CR>
+nnoremap <leader>b :FzfBuffers<CR>
 
 function! s:fzf_statusline()
   highlight fzf1 ctermfg=1 ctermbg=8
