@@ -11,10 +11,8 @@ nnoremap <silent> <M-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <M-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
 
-if has('nvim')
-  " Terminal mappings
-  tnoremap <silent> <M-h> <c-\><c-n>:TmuxNavigateLeft<cr>
-  tnoremap <silent> <M-j> <c-\><c-n>:TmuxNavigateDown<cr>
-  tnoremap <silent> <M-k> <c-\><c-n>:TmuxNavigateUp<cr>
-  tnoremap <silent> <M-l> <c-\><c-n>:TmuxNavigateRight<cr>
-end
+" Terminal mappings
+tnoremap <silent> <M-h> <c-\><c-n>:TmuxNavigateLeft<cr>
+tnoremap <silent> <M-j> <c-\><c-n>:TmuxNavigateDown<cr>
+tnoremap <silent> <M-k> <c-\><c-n>:TmuxNavigateUp<cr>
+tnoremap <silent> <M-l> <c-\><c-n>:TmuxNavigateRight<cr>
