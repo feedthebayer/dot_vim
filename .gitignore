@@ -5,5 +5,5 @@ sessions/
 .netrwhist/
 spell/
 plug_ins/custom
-autoload/plug.vim
+autoload/plug*
 
