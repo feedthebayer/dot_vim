@@ -25,10 +25,10 @@ noremap <Right> <nop>
 " Regular Mappings
 " ---------------
 
-" Yank entire buffer with gy
+" Get (yank) entire buffer with gy
 nnoremap gy :0,$ y<cr>
 
-" Select entire buffer
+" Visually select entire buffer
 nnoremap vy ggVG
 
 " Make Y behave like other capital commands.
@@ -179,10 +179,6 @@ noremap <leader>t- :35split<Bar>:wincmd j<CR>:term<CR>
 " Typo Fixes
 " ---------------
 
-noremap <F1> <Esc>
-inoremap <F1> <Esc>
-cnoremap w' w<CR>
-
 " Disable the ever-annoying Ex mode shortcut key. Type visual my ass. Instead,
 " make Q repeat the last macro instead. *hat tip* http://vimbits.com/bits/263
 nnoremap Q @@
@@ -190,9 +186,6 @@ nnoremap Q @@
 " Removes doc lookup mapping because it's easy to fat finger and never useful.
 nnoremap K k
 vnoremap K k
-
-" Toggle paste mode with F5
-nnoremap <silent> <F5> :set paste!<CR>
 
 " Insert date
 iabbrev ddate <C-R>=strftime("%Y-%m-%d")<CR>
