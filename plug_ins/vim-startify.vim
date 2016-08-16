@@ -32,8 +32,8 @@ hi StartifySlash   ctermfg=240
 autocmd VimEnter *
             \ if !argc() |
             \   Startify |
-            " \   NERDTree |
-            \   execute "normal \<c-w>w" |
+            \   NERDTree |
+            \   execute "normal \<c-w>w" | "\ This must be here to work
             \ endif
 " Keep NERDTree from opening a split when startify is open
 autocmd User Startified setlocal buftype=
