@@ -134,19 +134,19 @@ nnoremap <silent> <leader>sa :SortAttributes<CR>
 " {
 "   c: 1,
 "   a: 1,
-"   b: 1
+"   b: 1,
 " }
 "
 " becomes
 "
-" <div
-"   a="1"
-"   b="1"
-"   c="1"
-" />
+" {
+"   a: 1,
+"   b: 1,
+"   c: 1,
+" }
 " ---------------
 function! SortBlock()
-  normal vi}
+  normal vi}jV
   :'<,'>sort
 endfunction
 
