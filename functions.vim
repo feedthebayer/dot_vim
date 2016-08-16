@@ -61,7 +61,8 @@ function CRWriteIfNecessary()
     " Execute a normal enter when in Quickfix list (for opening files)
     execute "normal! \<enter>"
   else
-    WriteBufferIfNecessary
+    " WriteBufferIfNecessary
+    :write
   endif
 endfunction
 
