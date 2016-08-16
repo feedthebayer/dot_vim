@@ -20,23 +20,6 @@ command! QuickSpellingFix call QuickSpellingFix()
 nnoremap <silent> <leader>z :QuickSpellingFix<CR>
 
 " ---------------
-" Convert Ruby 1.8 hash rockets to 1.9 JSON style hashes.
-" From: http://git.io/cxmJDw
-" Note: Defaults to the entire file unless in visual mode.
-" ---------------
-command! -bar -range=% NotRocket execute
-  \'<line1>,<line2>s/:\(\w\+\)\s*=>/\1:/e' . (&gdefault ? '' : 'g')
-
-" ------------------------------------
-" Convert .should rspec syntax to expect.
-" From: https://coderwall.com/p/o2oyrg
-" ------------------------------------
-command! -bar -range=% Expect execute
-  \'<line1>,<line2>s/\(\S\+\).should\(\s\+\)==\s*\(.\+\)' .
-  \'/expect(\1).to\2eq(\3)/e' .
-  \(&gdefault ? '' : 'g')
-
-" ---------------
 " Strip Trailing White Space
 " ---------------
 " From http://vimbits.com/bits/377
@@ -52,38 +35,20 @@ function! Preserve(command)
   let @/=_s
   call cursor(l, c)
 endfunction
+
 function! StripTrailingWhiteSpaceAndSave()
   :call Preserve("%s/\\s\\+$//e")<CR>
   :write
 endfunction
+
 command! StripTrailingWhiteSpaceAndSave :call StripTrailingWhiteSpaceAndSave()<CR>
 nnoremap <silent> <leader>stw :silent! StripTrailingWhiteSpaceAndSave<CR>
-
-" ---------------
-" Paste using Paste Mode
-"
-" Keeps indentation in source.
-" ---------------
-function! PasteWithPasteMode()
-  if &paste
-    normal p
-  else
-    " Enable paste mode and paste the text, then disable paste mode.
-    set paste
-    normal p
-    set nopaste
-  endif
-endfunction
-
-command! PasteWithPasteMode call PasteWithPasteMode()
-nnoremap <silent> <leader>p :PasteWithPasteMode<CR>
 
 " ---------------
 " Write Buffer if Necessary
 "
 " Writes the current buffer if it's needed, unless we're the in QuickFix mode.
 " ---------------
-
 function WriteBufferIfNecessary()
   if &modified && !&readonly
     :write
@@ -93,14 +58,13 @@ command! WriteBufferIfNecessary call WriteBufferIfNecessary()
 
 function CRWriteIfNecessary()
   if &filetype == "qf"
-    " Execute a normal enter when in Quickfix list.
+    " Execute a normal enter when in Quickfix list (for opening files)
     execute "normal! \<enter>"
   else
     WriteBufferIfNecessary
   endif
 endfunction
 
-" Clear the search buffer when hitting return
 " Idea for MapCR from http://git.io/pt8kjA
 function! MapCR()
   nnoremap <silent> <enter> :call CRWriteIfNecessary()<CR>
@@ -139,33 +103,6 @@ function! CopyMatches(reg)
 endfunction
 command! -register CopyMatches call CopyMatches(<q-reg>)
 
-function! YankLineWithoutNewline()
-  let l = line(".")
-  let c = col(".")
-  normal ^y$
-  " Clean up: restore previous search history, and cursor position
-  call cursor(l, c)
-endfunction
-
-nnoremap <silent>yl :call YankLineWithoutNewline()<CR>
-
-" Show the word frequency of the current buffer in a split.
-" from: http://vim.wikia.com/wiki/Word_frequency_statistics_for_a_file
-function! WordFrequency() range
-  let all = split(join(getline(a:firstline, a:lastline)), '\A\+')
-  let frequencies = {}
-  for word in all
-    let frequencies[word] = get(frequencies, word, 0) + 1
-  endfor
-  new
-  setlocal buftype=nofile bufhidden=hide noswapfile tabstop=20
-  for [key,value] in items(frequencies)
-    call append('$', key."\t".value)
-  endfor
-  sort i
-endfunction
-command! -range=% WordFrequency <line1>,<line2>call WordFrequency()
-
 " ---------------
 " Sort attributes inside <> in html.
 " E.g.
@@ -193,6 +130,20 @@ nnoremap <silent> <leader>sa :SortAttributes<CR>
 
 " ---------------
 " Sort values inside a curl block
+" E.g.
+" {
+"   c: 1,
+"   a: 1,
+"   b: 1
+" }
+"
+" becomes
+"
+" <div
+"   a="1"
+"   b="1"
+"   c="1"
+" />
 " ---------------
 function! SortBlock()
   normal vi}
