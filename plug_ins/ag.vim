@@ -11,6 +11,6 @@ if !has('win32') && !has('win64')
     finish
   endif
 
-  nnoremap <silent> <leader>as :AgFromSearch<CR>
+  nnoremap <silent> <leader>as :AgFromSearch!<CR>
   nnoremap <leader>a :Ag!<space>
 endif
