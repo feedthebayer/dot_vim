@@ -26,8 +26,8 @@ function! SetJavaScriptCheckers()
     call add(checkers, 'unityscript')
   endif
 
-  echo 'set checkers'
-  echo checkers
+  " echo 'set checkers'
+  " echo checkers
   let g:neomake_javascript_enabled_makers = checkers
 endfunction
 
