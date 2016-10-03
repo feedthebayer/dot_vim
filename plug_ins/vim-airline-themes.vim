@@ -4,3 +4,4 @@ if exists('g:plug_loading_plugins')
 endif
 
 let g:airline_theme = 'solarized'
+let g:airline_solarized_dark_inactive_border = 1
