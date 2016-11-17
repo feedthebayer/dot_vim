@@ -11,6 +11,8 @@ if !has('win32') && !has('win64')
     finish
   endif
 
+  let g:ag_prg="rg --no-heading --vimgrep"
+
   nnoremap <silent> <leader>as :AgFromSearch!<CR>
   nnoremap <leader>a :Ag!<space>
 endif
