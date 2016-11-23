@@ -2,7 +2,7 @@ plugged/
 sessions/
 .DS_Store
 
-.netrwhist/
+.netrwhist
 spell/
 plug_ins/custom
 autoload/plug*

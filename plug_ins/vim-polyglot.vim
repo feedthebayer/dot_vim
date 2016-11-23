@@ -1,4 +1,6 @@
 if exists('g:plug_loading_plugins')
-  Plug 'elzr/vim-json'
+  Plug 'sheerun/vim-polyglot'
   finish
 endif
+
+

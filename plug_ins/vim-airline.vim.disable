@@ -1,0 +1,51 @@
+if exists('g:plug_loading_plugins')
+  Plug 'vim-airline/vim-airline'
+  finish
+endif
+
+let g:airline_extensions = ['quickfix', 'wordcount', 'whitespace']
+" add syntastic?
+
+let g:airline_powerline_fonts = 1
+let g:airline_skip_empty_sections = 1
+let g:airline#extensions#hunks#enabled = 0
+
+let g:airline_mode_map = {
+    \ '__' : '-',
+    \ 'n'  : 'N',
+    \ 'i'  : 'I',
+    \ 'R'  : 'R',
+    \ 'c'  : 'C',
+    \ 'v'  : 'V',
+    \ 'V'  : 'V',
+    \ '' : 'V',
+    \ 's'  : 'S',
+    \ 'S'  : 'S',
+    \ '' : 'S',
+    \ }
+
+let g:airline#extensions#default#section_truncate_width = {
+    \ 'c': 65,
+    \ 'z': 55,
+    \ 'warning': 45,
+    \ 'error': 45,
+    \ }
+
+" let g:airline_mode_map = {
+"       \ 'n'  : 'N',
+"       \ 'i'  : 'I',
+"       \ 'R'  : 'R',
+"       \ 'v'  : 'V',
+"       \ 'V'  : 'VL',
+"       \ 'c'  : 'CMD',
+"       \ '' : 'VB',
+"       \ }
+" " Show the current working directory folder name
+" let g:airline_section_b = '%{substitute(getcwd(), ".*\/", "", "g")}'
+let g:airline_section_b = '%t'
+let g:airline_section_c = '%{substitute(getcwd(), ".*\/", "", "g")}'
+let g:airline_section_x = ''
+" let g:airline_section_y = '%{airline#util#wrap(airline#extensions#branch#get_head(),0)}'
+let g:airline_section_y = ''
+" let g:airline_section_z = '%3p%% %#__accent_bold#%4l%#__restore__#:%3'
+" let g:airline_section_z = '%3p%% %{substitute(line("."), "\\v(\\d)((\\d\\d\\d)+\\d@!)@=", "\\1,", "g")}|%{substitute(line("$"), "\\v(\\d)((\\d\\d\\d)+\\d@!)@=", "\\1,", "g")}'

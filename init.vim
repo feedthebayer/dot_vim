@@ -1,7 +1,7 @@
 " =============================================================================
-" Who: Brandon Bayer (@flybayer) - Thanks to Jeremy Mack (@mutewinter)!
-" Description: The Vim Configuration of Champions
-" Version: 4.0 - NeoVim only with vim-plug instead of vundle!
+" Who: Brandon Bayer (@flybayer)
+" Description: Simple, Beautiful, and Screaming Fast Vim Config
+" Version: 5.0 - Major clean up and rework!
 " =============================================================================
 "
 " All of the Plug plugins are loaded with Plug from this file.
@@ -11,8 +11,6 @@ source ~/.vim/plug.vim
 source ~/.vim/platforms.vim
 " All of the Vim configuration.
 source ~/.vim/config.vim
-" New commands
-source ~/.vim/commands.vim
 " All hotkeys, not dependant on plugins, are mapped here.
 source ~/.vim/mappings.vim
 " Load plugin-specific configuration.

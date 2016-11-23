@@ -25,8 +25,11 @@ noremap <Right> <nop>
 " Regular Mappings
 " ---------------
 
+" Open help in a vetical split
+cnoreabbrev h vert bo help
+
 " Get (yank) entire buffer with gy
-nnoremap gy :0,$ y<cr>
+nnoremap yyy :0,$ y<cr>
 
 " Visually select entire buffer
 nnoremap vy ggVG
@@ -42,10 +45,6 @@ noremap L $
 " Create newlines without entering insert mode
 nnoremap go o<Esc>k
 nnoremap gO O<Esc>j
-
-" remap U to <C-r> for easier redo
-" from http://vimbits.com/bits/356
-nnoremap U <C-r>
 
 " Swap implementations of ` and ' jump to markers
 " By default, ' jumps to the marked line, ` jumps to the marked line and
@@ -77,16 +76,6 @@ tnoremap <silent> <M-j> <c-\><c-n>:wincmd j<CR>
 tnoremap <silent> <M-k> <c-\><c-n>:wincmd k<CR>
 tnoremap <silent> <M-l> <c-\><c-n>:wincmd l<CR>
 
-"   4 Window Splits
-"
-"   -----------------
-"   g1 | g2 | g3 | g4
-"   -----------------
-nnoremap <silent> g1 :WriteBufferIfNecessary<CR>:wincmd t<CR>
-nnoremap <silent> g2 :WriteBufferIfNecessary<CR>:wincmd t<bar>:wincmd l<CR>
-nnoremap <silent> g3 :WriteBufferIfNecessary<CR>:wincmd t<bar>:wincmd l<bar>
-      \:wincmd l<CR>
-nnoremap <silent> g4 :WriteBufferIfNecessary<CR>:wincmd b<CR>
 
 " Previous Window
 nnoremap <silent> gp :wincmd p<CR>
@@ -102,9 +91,6 @@ tnoremap <c-n> <c-\><c-n>
 " Modifer Mappings
 " ---------------
 
-" Make line completion easier.
-inoremap <C-l> <C-x><C-l>
-
 " Scroll larger amounts with C-j / C-k
 nnoremap <C-j> 12gj
 nnoremap <C-k> 12gk
@@ -116,6 +102,19 @@ nnoremap <C-k> 12gk
 " NOTE - I remap my keyboard control key to trigger ESC when not combined with  another key
 
 " ---------------
+" Command Line Mode Mappings
+" ---------------
+cnoremap <C-a> <Home>
+cnoremap <expr> <C-k> mappings#clear_line_after_cursor()
+cnoremap <expr> <Esc> "\<C-c>"
+
+function! mappings#clear_line_after_cursor()
+  let pos = getcmdpos()
+  let line_len = strlen(getcmdline())
+  return repeat("\<Del>", line_len - pos + 1)
+endfunction
+
+" ---------------
 " Leader Mappings
 " ---------------
 
@@ -124,9 +123,6 @@ noremap <leader>cd :lcd %:p:h<CR>:pwd<CR>
 
 " Clear search
 noremap <silent><leader>/ :nohls<CR>
-
-" Highlight search word under cursor without jumping to next
-nnoremap <leader>h *<C-O>
 
 " Toggle spelling mode with <leader>s
 nnoremap <silent> <leader>s :set spell!<CR>
@@ -153,10 +149,6 @@ nnoremap <silent> <leader>sl :normal "lyy"lpwvLr-^"lyyk"lP<cr>
 " Format the entire file
 nnoremap <leader>fef mx=ggG='x
 
-" Format a json file with Underscore CLI
-" Inspirited by https://github.com/spf13/spf13-vim/blob/3.0/.vimrc#L390
-nnoremap <leader>fj <Esc>:%!underscore print<CR><Esc>:set filetype=json<CR>
-
 " Split window vertically or horizontally *and* switch to the new split!
 nnoremap <silent> <leader>s- :split<Bar>:wincmd j<CR>:wincmd =<CR>
 nnoremap <silent> <leader>s\ :vsplit<Bar>:wincmd l<CR>:wincmd =<CR>
@@ -164,45 +156,8 @@ nnoremap <silent> <leader>s\ :vsplit<Bar>:wincmd l<CR>:wincmd =<CR>
 " Close the current window
 nnoremap <silent> <m-w> :close<CR>
 
-" Reselect the text that was just pasted
-nnoremap <leader>v V`]
-
-" Paste and select pasted
-nnoremap <expr> gpp '`[' . strpart(getregtype(), 0, 1) . '`]'
-
 " Open terminal in a vertical split and switch to it
 noremap <leader>t\ :vsplit<Bar>:wincmd l<CR>:term<CR>
 " Open terminal in a horizontal split and switch to it
 noremap <leader>t- :35split<Bar>:wincmd j<CR>:term<CR>
-
-" ---------------
-" Typo Fixes
-" ---------------
-
-" Disable the ever-annoying Ex mode shortcut key. Type visual my ass. Instead,
-" make Q repeat the last macro instead. *hat tip* http://vimbits.com/bits/263
-nnoremap Q @@
-
-" Removes doc lookup mapping because it's easy to fat finger and never useful.
-nnoremap K k
-vnoremap K k
-
-" Insert date
-iabbrev ddate <C-R>=strftime("%Y-%m-%d")<CR>
-
-" copy current file name (relative/absolute) to system clipboard
-" from http://stackoverflow.com/a/17096082/22423
-if has("mac") || has("gui_macvim") || has("gui_mac")
-  " relative path  (src/foo.txt)
-  nnoremap <silent> <leader>yp :let @*=expand("%")<CR>
-
-  " absolute path  (/something/src/foo.txt)
-  nnoremap <silent> <leader>yP :let @*=expand("%:p")<CR>
-
-  " filename       (foo.txt)
-  nnoremap <silent> <leader>yf :let @*=expand("%:t")<CR>
-
-  " directory name (/something/src)
-  nnoremap <silent> <leader>yd :let @*=expand("%:p:h")<CR>
-endif
 

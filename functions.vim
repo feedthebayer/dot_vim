@@ -3,23 +3,6 @@
 " ----------------------------------------
 
 " ---------------
-" Quick spelling fix (first item in z= list)
-" ---------------
-function! QuickSpellingFix()
-  if &spell
-    normal 1z=
-  else
-    " Enable spelling mode and do the correction
-    set spell
-    normal 1z=
-    set nospell
-  endif
-endfunction
-
-command! QuickSpellingFix call QuickSpellingFix()
-nnoremap <silent> <leader>z :QuickSpellingFix<CR>
-
-" ---------------
 " Strip Trailing White Space
 " ---------------
 " From http://vimbits.com/bits/377
@@ -49,20 +32,19 @@ nnoremap <silent> <leader>stw :silent! StripTrailingWhiteSpaceAndSave<CR>
 "
 " Writes the current buffer if it's needed, unless we're the in QuickFix mode.
 " ---------------
-function WriteBufferIfNecessary()
+function! WriteBufferIfNecessary()
   if &modified && !&readonly
     :write
   endif
 endfunction
 command! WriteBufferIfNecessary call WriteBufferIfNecessary()
 
-function CRWriteIfNecessary()
+function! CRWriteIfNecessary()
   if &filetype == "qf"
     " Execute a normal enter when in Quickfix list (for opening files)
     execute "normal! \<enter>"
   else
-    " WriteBufferIfNecessary
-    :write
+    WriteBufferIfNecessary
   endif
 endfunction
 
@@ -96,13 +78,6 @@ endfunction
 
 command! ListLeaders :call ListLeaders()
 
-function! CopyMatches(reg)
-  let hits = []
-  %s//\=len(add(hits, submatch(0))) ? submatch(0) : ''/ge
-  let reg = empty(a:reg) ? '+' : a:reg
-  execute 'let @'.reg.' = join(hits, "\n") . "\n"'
-endfunction
-command! -register CopyMatches call CopyMatches(<q-reg>)
 
 " ---------------
 " Sort attributes inside <> in html.
@@ -153,3 +128,4 @@ endfunction
 
 command! SortBlock call SortBlock()
 nnoremap <silent> <leader>sb :SortBlock<CR>
+

@@ -17,7 +17,8 @@ function! s:fzf_statusline()
   highlight fzf1 ctermfg=1 ctermbg=8
   highlight fzf2 ctermfg=2 ctermbg=8
   highlight fzf3 ctermfg=7 ctermbg=8
-  setlocal statusline=%#fzf2#
+  setlocal statusline=%#fzf1#\ >\ %#fzf2#fz%#fzf3#f
+  " setlocal statusline=%#fzf2#
 endfunction
 autocmd! User FzfStatusLine call <SID>fzf_statusline()
 
