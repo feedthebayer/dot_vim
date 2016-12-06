@@ -57,6 +57,7 @@ set timeoutlen=350     " Time to wait for a command (after leader for example).
 " set iskeyword+=\$,-   " Add extra characters that are valid parts of variables
 set scrolloff=3        " Keep three lines below the last line when scrolling
 set switchbuf=useopen  " Switch to an existing buffer if one exists
+set inccommand=split   " Live search/replace (%s/x/y/) preview!
 
 " ---------------
 " Text Format
