@@ -66,15 +66,28 @@ nnoremap <silent> k gk
 " ---------------
 " Window Movement
 " ---------------
-nnoremap <silent> <M-h> :WriteBufferIfNecessary<CR>:wincmd h<CR>
-nnoremap <silent> <M-j> :WriteBufferIfNecessary<CR>:wincmd j<CR>
-nnoremap <silent> <M-k> :WriteBufferIfNecessary<CR>:wincmd k<CR>
-nnoremap <silent> <M-l> :WriteBufferIfNecessary<CR>:wincmd l<CR>
 
-tnoremap <silent> <M-h> <c-\><c-n>:wincmd h<CR>
-tnoremap <silent> <M-j> <c-\><c-n>:wincmd j<CR>
-tnoremap <silent> <M-k> <c-\><c-n>:wincmd k<CR>
-tnoremap <silent> <M-l> <c-\><c-n>:wincmd l<CR>
+" Switch windows
+nnoremap <silent> <A-h> :WriteBufferIfNecessary<CR>:wincmd h<CR>
+nnoremap <silent> <A-j> :WriteBufferIfNecessary<CR>:wincmd j<CR>
+nnoremap <silent> <A-k> :WriteBufferIfNecessary<CR>:wincmd k<CR>
+nnoremap <silent> <A-l> :WriteBufferIfNecessary<CR>:wincmd l<CR>
+
+tnoremap <silent> <A-h> <c-\><c-n>:wincmd h<CR>
+tnoremap <silent> <A-j> <c-\><c-n>:wincmd j<CR>
+tnoremap <silent> <A-k> <c-\><c-n>:wincmd k<CR>
+tnoremap <silent> <A-l> <c-\><c-n>:wincmd l<CR>
+
+" Resize windows
+nnoremap <silent> <A-Right> :wincmd ><CR>
+nnoremap <silent> <A-Left> :wincmd <<CR>
+nnoremap <silent> <A-Up> :wincmd +<CR>
+nnoremap <silent> <A-Down> :wincmd -<CR>
+
+tnoremap <silent> <A-Right> <c-\><c-n>:wincmd ><CR>i
+tnoremap <silent> <A-Left> <c-\><c-n>:wincmd <<CR>i
+tnoremap <silent> <A-Up> <c-\><c-n>:wincmd +<CR>i
+tnoremap <silent> <A-Down> <c-\><c-n>:wincmd -<CR>i
 
 
 " Previous Window
@@ -156,7 +169,7 @@ nnoremap <silent> <leader>s- :split<Bar>:wincmd j<CR>:wincmd =<CR>
 nnoremap <silent> <leader>s\ :vsplit<Bar>:wincmd l<CR>:wincmd =<CR>
 
 " Close the current window
-nnoremap <silent> <m-w> :close<CR>
+nnoremap <silent> <A-w> :close<CR>
 
 " Open terminal in a vertical split and switch to it
 noremap <leader>t\ :vsplit<Bar>:wincmd l<CR>:term<CR>

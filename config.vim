@@ -52,9 +52,8 @@ set cf                 " Enable error files & error jumping.
 set clipboard+=unnamed " Yanks go on clipboard instead.
 set autowrite          " Writes on make/shell commands
 set timeoutlen=350     " Time to wait for a command (after leader for example).
-" set ttimeout
-" set ttimeoutlen=-1   " Neovim handles ESC as alt+key, this solves problem
-" set iskeyword+=\$,-   " Add extra characters that are valid parts of variables
+set ttimeout
+set ttimeoutlen=1      " Make arrow key mapping work
 set scrolloff=3        " Keep three lines below the last line when scrolling
 set switchbuf=useopen  " Switch to an existing buffer if one exists
 set inccommand=split   " Live search/replace (%s/x/y/) preview!
