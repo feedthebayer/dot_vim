@@ -107,6 +107,8 @@ nnoremap <C-k> 12gk
 cnoremap <C-a> <Home>
 cnoremap <expr> <C-k> mappings#clear_line_after_cursor()
 cnoremap <expr> <Esc> "\<C-c>"
+" Use %% to refer to directory of current file, regardless of cwd
+cnoremap %% <C-r>=expand('%:h').'/'<CR>
 
 function! mappings#clear_line_after_cursor()
   let pos = getcmdpos()
