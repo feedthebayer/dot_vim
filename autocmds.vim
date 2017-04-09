@@ -52,5 +52,9 @@ if has("autocmd")
     " Close FZF if it loses focus
     autocmd BufLeave *#FZF :bd!
 
+    " autocmd FileType javascript.jsx,javascript set formatprg=prettier-standard
+    " autocmd BufWritePre *.js :normal gggqG
+    " autocmd BufWritePre * Neoformat
+
   augroup END
 endif
