@@ -35,6 +35,9 @@ nnoremap <silent> <leader>stw :silent! StripTrailingWhiteSpaceAndSave<CR>
 function! WriteBufferIfNecessary()
   if &modified && !&readonly
     :write
+    if &filetype == "rust"
+      :RustFmt
+    endif
   endif
 endfunction
 command! WriteBufferIfNecessary call WriteBufferIfNecessary()

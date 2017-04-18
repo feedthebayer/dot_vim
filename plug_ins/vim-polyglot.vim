@@ -3,4 +3,6 @@ if exists('g:plug_loading_plugins')
   finish
 endif
 
+nnoremap <A-r> :RustRun<cr>
+let g:rustfmt_fail_silently = 1
 
