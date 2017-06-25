@@ -6,8 +6,9 @@
 " Color
 " ---------------
 set background=dark
-colorscheme NeoSolarized
-"set termguicolors
+" colorscheme NeoSolarized
+colorscheme default
+set termguicolors
 
 " -----------------------------
 " File Locations
