@@ -33,11 +33,11 @@ if has("autocmd")
     autocmd! CmdwinLeave * :call MapCR()
 
     " Show normal line numbers when focused and when in insert mode
-    autocmd InsertEnter * :set norelativenumber
-    autocmd FocusLost * :set norelativenumber
+    " autocmd InsertEnter * :set norelativenumber
+    " autocmd FocusLost * :set norelativenumber
     " Show relative numbers when not focused or in normal mode
-    autocmd InsertLeave * :set relativenumber
-    autocmd FocusGained * if &modifiable | :set relativenumber | endif
+    " autocmd InsertLeave * :set relativenumber
+    " autocmd FocusGained * if &modifiable | :set relativenumber | endif
 
     " Automatically close terminal buffers that have ended
     " (no more [Process exited 0] !!)
@@ -56,5 +56,7 @@ if has("autocmd")
     " autocmd BufWritePre *.js :normal gggqG
     " autocmd BufWritePre * Neoformat
 
+    " Fix syntax highlighting in Vue files
+    autocmd FileType vue syntax sync fromstart
   augroup END
 endif

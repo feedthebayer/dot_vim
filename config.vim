@@ -5,7 +5,7 @@
 " ---------------
 " Color
 " ---------------
-set background=dark
+set background=light
 " colorscheme NeoSolarized
 colorscheme default
 set termguicolors
@@ -25,19 +25,19 @@ endif
 " UI
 " ---------------
 set ruler          " Ruler on
-set relativenumber " Use hybrid line numbers (enable relative numbers)
-set number         " Use hybrid line numbers (enable current number for current line)
-set cursorline     " Highlight current line
+" set relativenumber " Use hybrid line numbers (enable relative numbers)
+" set number         " Use hybrid line numbers (enable current number for current line)
+" set cursorline     " Highlight current line
 set noshowmode     " Don't show the mode since Powerline shows it
 set title          " Set the title of the window in the terminal to the file
-set colorcolumn=80 " Color the 80th column differently as a wrapping guide.
+" set colorcolumn=80 " Color the 80th column differently as a wrapping guide.
 
 " Hide Tildes at the end of the file
-highlight Nontext ctermfg = 0
+" highlight Nontext ctermfg=White
 
 " Slim pane divider
 set fillchars+=vert:│
-highlight VertSplit ctermbg=NONE guibg=NONE
+highlight VertSplit ctermbg=white guibg=white
 highlight StatusLine cterm=NONE
 highlight StatusLineNC cterm=NONE
 
