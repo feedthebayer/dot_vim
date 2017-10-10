@@ -1,4 +1,4 @@
 if exists('g:plug_loading_plugins')
-  Plug 'scratch.vim'
+  Plug 'vim-scripts/scratch.vim'
   finish
 endif
