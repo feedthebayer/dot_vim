@@ -22,5 +22,4 @@ endfor
 
 unlet g:plug_loading_plugins
 call plug#end()
-syntax off
 

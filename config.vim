@@ -2,12 +2,12 @@
 " Regular Vim Configuration (No Plugins Needed)
 " ---------------------------------------------
 
+let &shell = '/bin/bash'
+
 " ---------------
 " Color
 " ---------------
-set background=light
-" colorscheme NeoSolarized
-colorscheme default
+colorscheme zenfly
 set termguicolors
 
 " -----------------------------
@@ -24,7 +24,7 @@ endif
 " ---------------
 " UI
 " ---------------
-set ruler          " Ruler on
+" set ruler          " Ruler on
 " set relativenumber " Use hybrid line numbers (enable relative numbers)
 " set number         " Use hybrid line numbers (enable current number for current line)
 " set cursorline     " Highlight current line
@@ -33,11 +33,11 @@ set title          " Set the title of the window in the terminal to the file
 " set colorcolumn=80 " Color the 80th column differently as a wrapping guide.
 
 " Hide Tildes at the end of the file
-" highlight Nontext ctermfg=White
+highlight Nontext ctermfg=white guifg=white
 
 " Slim pane divider
 set fillchars+=vert:│
-highlight VertSplit ctermbg=white guibg=white
+highlight VertSplit ctermfg=white guifg=white ctermbg=black guibg=black
 highlight StatusLine cterm=NONE
 highlight StatusLineNC cterm=NONE
 
@@ -86,4 +86,5 @@ set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
 " ---------------
 set visualbell " Turn off beeps
 set t_vb=
+
 

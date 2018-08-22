@@ -63,6 +63,9 @@ vnoremap <tab> %
 nnoremap <silent> j gj
 nnoremap <silent> k gk
 
+nnoremap <silent> [[ :lprev<cr>
+nnoremap <silent> ]] :lnext<cr>
+
 " ---------------
 " Window Movement
 " ---------------

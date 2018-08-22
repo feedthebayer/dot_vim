@@ -132,3 +132,11 @@ endfunction
 command! SortBlock call SortBlock()
 nnoremap <silent> <leader>sb :SortBlock<CR>
 
+" Show syntax highlighting group for word under cursor
+nnoremap <leader>st :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc

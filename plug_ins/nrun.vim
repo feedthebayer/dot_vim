@@ -1,5 +1,5 @@
 if exists('g:plug_loading_plugins')
-  Plug 'sbdchd/neoformat'
+  Plug 'jaawerth/nrun.vim'
   finish
 endif
 

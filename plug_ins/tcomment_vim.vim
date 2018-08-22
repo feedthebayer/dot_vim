@@ -3,13 +3,13 @@ if exists('g:plug_loading_plugins')
   finish
 endif
 
-let g:tcommentMapLeader1 = ''
-let g:tcommentMapLeader2 = ''
-let g:tcommentMapLeaderOp1 = 'tc'
+let g:tcomment_mapleader1 = ''
+let g:tcomment_mapleader2 = ''
+let g:tcomment_opleader1 = 'tc'
 nnoremap <silent><leader>cc :TComment<CR>
 vnoremap <silent><leader>cc :TComment<CR>
 nnoremap <silent><leader>cb :TCommentBlock<CR>
 vnoremap <silent><leader>cb :TCommentBlock<CR>
 
 " Use '//' for C comments instead of '/* .. */'
-call tcomment#DefineType('c', '// %s')
+call tcomment#type#Define('c', '// %s')
