@@ -25,7 +25,6 @@ dependencies.
 * [Fugitive](https://github.com/tpope/vim-fugitive) Requires Git to be installed.
 * [Ag.vim](https://github.com/rking/ag.vim) Requires
   [ripgrep](https://github.com/BurntSushi/ripgrep) to be installed.
-* [Source Code for Powerline](http://git.io/H3fYBg) The custom font I'm using for vim-airline.
 
 ## Mappings
 
