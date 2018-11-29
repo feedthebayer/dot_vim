@@ -1,6 +1,5 @@
 if exists('g:plug_loading_plugins')
   Plug 'w0rp/ale'
-  Plug 'flybayer/ale', { 'branch': 'fix-prettier-d' }
   finish
 endif
 
