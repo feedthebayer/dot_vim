@@ -6,7 +6,7 @@ endif
 let g:lightline = {
       \ 'colorscheme': 'bbsolarized',
       \ 'active': {
-      \   'left': [ [ 'column', 'paste', 'filename' ], [], [] ],
+      \   'left': [ [ 'lineinfo', 'paste', 'filename' ], [], [] ],
       \   'right': [ [], [], [] ]
       \ },
       \ 'inactive': {
