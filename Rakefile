@@ -36,7 +36,7 @@ def add_plugins_to_readme(plugins = [])
   unless index.nil?
     lines.insert(index+1, "\n#{PLUGINS_HEADER}")
     plugin_rows = plugins
-      .sort {|x,y| 
+      .sort {|x,y|
         x[:stars] <=> y[:stars] or x[:name].downcase <=> y[:name].downcase
       }
       .reverse
@@ -126,7 +126,7 @@ def fetch_plugin_info(github_link)
   info[:config_file] = "#{PLUGINS_FOLDER}/#{info[:config_file_name]}"
 
   plugin_info = repo_info(github_user, github_repo)
-  info[:description] = plugin_info['description'].strip
+  info[:description] = plugin_info['description'] && plugin_info['description'].strip
   info[:stars] = plugin_info['stargazers_count']
   info[:stars_text] = "#{comma_number(plugin_info['stargazers_count'])} ★"
 
@@ -144,7 +144,7 @@ def repo_info(user, name)
   # Without a GitHub Client / Secret token you will only be able to make 60
   # requests per hour, meaning you can only update the readme once.
   # Read more here http://developer.github.com/v3/#rate-limiting.
-  if ENV['GITHUB_OAUTH_TOKEN'] 
+  if ENV['GITHUB_OAUTH_TOKEN']
     api_url += "?access_token=#{ENV['GITHUB_OAUTH_TOKEN']}"
   end
 
