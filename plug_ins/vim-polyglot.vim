@@ -8,3 +8,4 @@ let g:rustfmt_fail_silently = 1
 
 " let g:javascript_plugin_flow = 1
 let g:polyglot_disabled = ['javascript', 'jsx']
+let g:vim_markdown_frontmatter = 1

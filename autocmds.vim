@@ -58,5 +58,9 @@ if has("autocmd")
 
     " Fix syntax highlighting in Vue files
     autocmd FileType vue syntax sync fromstart
+
+    " Fix highlighting in markdown files
+    " autocmd FileType markdown colorscheme zenfly
+    " autocmd FileType mdx colorscheme zenfly
   augroup END
 endif
