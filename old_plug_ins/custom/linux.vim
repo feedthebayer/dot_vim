@@ -1,1 +1,0 @@
-/home/bbayer/.linux.vim
