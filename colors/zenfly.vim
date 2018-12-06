@@ -5,6 +5,7 @@ if exists("syntax_on")
 endif
 let g:colors_name="zenfly"
 
+" SYNTAX
 hi Comment	  gui=bold,italic guifg=#4B4B4B guibg=NONE
 hi Constant	  gui=NONE guifg=NONE guibg=NONE
 hi String	    gui=NONE guifg=NONE guibg=NONE
@@ -33,7 +34,6 @@ hi Ignore	    gui=NONE guifg=NONE guibg=NONE
 hi Error		  gui=NONE guifg=NONE guibg=NONE
 hi Todo		    gui=NONE guifg=NONE guibg=NONE
 
-" guifg=#007B5B
 hi xmlTagName gui=italic
 hi jsClassProperty gui=bold
 hi link htmlTagName xmlTagName

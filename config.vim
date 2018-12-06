@@ -31,6 +31,7 @@ endif
 set noshowmode     " Don't show the mode since Powerline shows it
 set title          " Set the title of the window in the terminal to the file
 " set colorcolumn=80 " Color the 80th column differently as a wrapping guide.
+set splitbelow       " Open new splits at the bottom instead of top
 
 " Hide Tildes at the end of the file
 highlight Nontext ctermfg=white guifg=white
@@ -38,8 +39,11 @@ highlight Nontext ctermfg=white guifg=white
 " Slim pane divider
 set fillchars+=vert:│
 highlight VertSplit ctermfg=white guifg=white ctermbg=black guibg=black
-highlight StatusLine cterm=NONE
-highlight StatusLineNC cterm=NONE
+highlight StatusLine guifg=white guibg=black
+highlight StatusLineNC guifg=white guibg=black
+
+" Highlight git merge conflict markers as an error message
+match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 

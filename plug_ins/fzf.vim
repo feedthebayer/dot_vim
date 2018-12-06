@@ -5,7 +5,8 @@ if exists('g:plug_loading_plugins')
 endif
 
 let g:fzf_command_prefix = 'Fzf'
-let g:fzf_layout = { 'down': '~10' }
+" let g:fzf_layout = { 'down': '~10' }
+let g:fzf_layout = { 'window': '10split enew' }
 
 " Leader Commands
 nnoremap <c-p> :FzfFiles<CR>
@@ -37,4 +38,3 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 
 let g:fzf_commits_log_options = "--graph --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset %Cgreen(%cr)%C(yellow)%d%Creset%n%s'"
-
