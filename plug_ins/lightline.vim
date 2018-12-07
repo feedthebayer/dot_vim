@@ -17,14 +17,9 @@ let g:lightline = {
       \   'modified': 'LightlineModified',
       \   'readonly': 'LightlineReadonly',
       \   'filename': 'LightlineFilename',
-      \   'column': 'LightlineColumn',
       \ },
       \ 'subseparator': { 'left': '', 'right': '' }
       \ }
-
-function! LightlineColumn()
-  return &bt == 'terminal' ? '' : printf('%-2d', col('.'))
-endfunction
 
 function! LightlineModified()
   return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : ''
