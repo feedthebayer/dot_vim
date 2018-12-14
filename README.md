@@ -63,32 +63,33 @@ on OSX at home.
 
 | Stars____ | **Plugin** | **Description** |
 | --------: | :--------- | :-------------- |
-| 18,290 ★ |[fzf](https://github.com/junegunn/fzf) [:page_facing_up:](plug_ins/fzf.vim)|:cherry_blossom: A command-line fuzzy finder |
-| 10,156 ★ |[vim-fugitive](https://github.com/tpope/vim-fugitive)|fugitive.vim: A Git wrapper so awesome, it should be illegal |
-| 6,455 ★ |[ale](https://github.com/w0rp/ale) [:page_facing_up:](plug_ins/ale.vim)|Asynchronous linting/fixing for Vim and Language Server Protocol (LSP) integration |
-| 5,316 ★ |[vim-gitgutter](https://github.com/airblade/vim-gitgutter) [:page_facing_up:](plug_ins/vim-gitgutter.vim)|A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks. |
-| 4,455 ★ |[emmet-vim](https://github.com/mattn/emmet-vim) [:page_facing_up:](plug_ins/emmet-vim.vim)|emmet for vim: http://emmet.io/ |
-| 4,078 ★ |[vim-easymotion](https://github.com/easymotion/vim-easymotion) [:page_facing_up:](plug_ins/vim-easymotion.vim)|Vim motions on speed! |
-| 3,283 ★ |[lightline.vim](https://github.com/itchyny/lightline.vim) [:page_facing_up:](plug_ins/lightline.vim)|A light and configurable statusline/tabline plugin for Vim |
-| 2,943 ★ |[vim-javascript](https://github.com/pangloss/vim-javascript) [:page_facing_up:](plug_ins/vim-javascript.vim)|Vastly improved Javascript indentation and syntax support in Vim. |
-| 2,815 ★ |[fzf.vim](https://github.com/junegunn/fzf.vim) [:page_facing_up:](plug_ins/fzf.vim)|fzf :heart: vim |
-| 2,344 ★ |[vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) [:page_facing_up:](plug_ins/vim-tmux-navigator.vim)|Seamless navigation between tmux panes and vim splits |
-| 2,266 ★ |[vim-polyglot](https://github.com/sheerun/vim-polyglot) [:page_facing_up:](plug_ins/vim-polyglot.vim)|A solid language pack for Vim. |
-| 1,830 ★ |[tabular](https://github.com/godlygeek/tabular) [:page_facing_up:](plug_ins/tabular.vim)|Vim script for text filtering and alignment |
-| 1,607 ★ |[ag.vim](https://github.com/rking/ag.vim) [:page_facing_up:](plug_ins/ag.vim)|Vim plugin for the_silver_searcher, 'ag', a replacement for the Perl module / CLI script 'ack' |
-| 1,371 ★ |[vim-jsx](https://github.com/mxw/vim-jsx) [:page_facing_up:](plug_ins/vim-jsx.vim)|React JSX syntax highlighting and indenting for vim. |
-| 936 ★ |[tcomment_vim](https://github.com/tomtom/tcomment_vim) [:page_facing_up:](plug_ins/tcomment_vim.vim)|An extensible & universal comment vim-plugin that also handles embedded filetypes |
-| 871 ★ |[vim-eunuch](https://github.com/tpope/vim-eunuch)|eunuch.vim: Helpers for UNIX |
+| 18,423 ★ |[fzf](https://github.com/junegunn/fzf) [:page_facing_up:](plug_ins/fzf.vim)|:cherry_blossom: A command-line fuzzy finder |
+| 10,189 ★ |[vim-fugitive](https://github.com/tpope/vim-fugitive)|fugitive.vim: A Git wrapper so awesome, it should be illegal |
+| 6,512 ★ |[ale](https://github.com/w0rp/ale) [:page_facing_up:](plug_ins/ale.vim)|Asynchronous linting/fixing for Vim and Language Server Protocol (LSP) integration |
+| 5,337 ★ |[vim-gitgutter](https://github.com/airblade/vim-gitgutter) [:page_facing_up:](plug_ins/vim-gitgutter.vim)|A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks. |
+| 4,464 ★ |[emmet-vim](https://github.com/mattn/emmet-vim) [:page_facing_up:](plug_ins/emmet-vim.vim)|emmet for vim: http://emmet.io/ |
+| 4,093 ★ |[vim-easymotion](https://github.com/easymotion/vim-easymotion) [:page_facing_up:](plug_ins/vim-easymotion.vim)|Vim motions on speed! |
+| 3,308 ★ |[lightline.vim](https://github.com/itchyny/lightline.vim) [:page_facing_up:](plug_ins/lightline.vim)|A light and configurable statusline/tabline plugin for Vim |
+| 2,955 ★ |[vim-javascript](https://github.com/pangloss/vim-javascript) [:page_facing_up:](plug_ins/vim-javascript.vim)|Vastly improved Javascript indentation and syntax support in Vim. |
+| 2,844 ★ |[fzf.vim](https://github.com/junegunn/fzf.vim) [:page_facing_up:](plug_ins/fzf.vim)|fzf :heart: vim |
+| 2,358 ★ |[vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) [:page_facing_up:](plug_ins/vim-tmux-navigator.vim)|Seamless navigation between tmux panes and vim splits |
+| 2,272 ★ |[vim-polyglot](https://github.com/sheerun/vim-polyglot) [:page_facing_up:](plug_ins/vim-polyglot.vim)|A solid language pack for Vim. |
+| 1,832 ★ |[tabular](https://github.com/godlygeek/tabular) [:page_facing_up:](plug_ins/tabular.vim)|Vim script for text filtering and alignment |
+| 1,609 ★ |[ag.vim](https://github.com/rking/ag.vim) [:page_facing_up:](plug_ins/ag.vim)|Vim plugin for the_silver_searcher, 'ag', a replacement for the Perl module / CLI script 'ack' |
+| 1,373 ★ |[vim-jsx](https://github.com/mxw/vim-jsx) [:page_facing_up:](plug_ins/vim-jsx.vim)|React JSX syntax highlighting and indenting for vim. |
+| 1,230 ★ |[vim-vinegar](https://github.com/tpope/vim-vinegar) [:page_facing_up:](plug_ins/vim-vinegar.vim)|vinegar.vim: Combine with netrw to create a delicious salad dressing |
+| 940 ★ |[tcomment_vim](https://github.com/tomtom/tcomment_vim) [:page_facing_up:](plug_ins/tcomment_vim.vim)|An extensible & universal comment vim-plugin that also handles embedded filetypes |
+| 877 ★ |[vim-eunuch](https://github.com/tpope/vim-eunuch)|eunuch.vim: Helpers for UNIX |
 | 742 ★ |[vim-node](https://github.com/moll/vim-node) [:page_facing_up:](plug_ins/vim-node.vim)|Tools and environment to make Vim superb for developing with Node.js. Like Rails.vim for Node. |
-| 513 ★ |[vim-flow](https://github.com/flowtype/vim-flow) [:page_facing_up:](plug_ins/vim-flow.vim)|A vim plugin for Flow |
-| 150 ★ |[vim-styled-components](https://github.com/styled-components/vim-styled-components) [:page_facing_up:](plug_ins/vim-styled-components.vim)|Vim bundle for http://styled-components.com based javascript files. |
+| 514 ★ |[vim-flow](https://github.com/flowtype/vim-flow) [:page_facing_up:](plug_ins/vim-flow.vim)|A vim plugin for Flow |
+| 151 ★ |[vim-styled-components](https://github.com/styled-components/vim-styled-components) [:page_facing_up:](plug_ins/vim-styled-components.vim)|Vim bundle for http://styled-components.com based javascript files. |
 | 99 ★ |[ListToggle](https://github.com/Valloric/ListToggle) [:page_facing_up:](plug_ins/ListToggle.vim)|A vim plugin for toggling the display of the quickfix list and the location-list. |
 | 31 ★ |[nrun.vim](https://github.com/jaawerth/nrun.vim) [:page_facing_up:](plug_ins/nrun.vim)|"which" and "exec" functions targeted at local node project bin, with "which" fallback |
 | 25 ★ |[scratch.vim](https://github.com/vim-scripts/scratch.vim)|Plugin to create and use a scratch Vim buffer |
 | 13 ★ |[vim-mdx-js](https://github.com/jxnblk/vim-mdx-js) [:page_facing_up:](plug_ins/vim-mdx-js.vim)| |
 | 1 ★ |[vim-autoreadwatch](https://github.com/mutewinter/vim-autoreadwatch)|A forked script for vim auto reloading of buffers when changed on disk. |
 
-_For a grand total of 24 plugins!_
+_For a grand total of 25 plugins!_
 
-_Generated by `rake update_readme` on 2018/12/06._
+_Generated by `rake update_readme` on 2018/12/14._
 

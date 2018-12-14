@@ -6,6 +6,7 @@ endif
 let g:colors_name="zenfly"
 
 " SYNTAX
+hi MatchParen gui=NONE guifg=black guibg=#ff922b
 hi Comment	  gui=bold,italic guifg=#4B4B4B guibg=NONE
 hi Constant	  gui=NONE guifg=NONE guibg=NONE
 hi String	    gui=NONE guifg=NONE guibg=NONE
