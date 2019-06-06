@@ -24,6 +24,7 @@ endif
 " ---------------
 " UI
 " ---------------
+set mouse=a
 " set ruler          " Ruler on
 " set relativenumber " Use hybrid line numbers (enable relative numbers)
 " set number         " Use hybrid line numbers (enable current number for current line)

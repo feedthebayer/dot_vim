@@ -39,8 +39,8 @@ function! LightlineFilename()
 endfunction
 
 
-let s:colors = [ [ '#4CA630', '#ffffff', 0, 0, 'bold' ] ]
-let s:inactivecolors = [ [ '#4CA630', '#ffffff', 0, 0] ]
+let s:colors = [ [ '#212529', '#c5f6fa', 0, 0, 'bold' ] ]
+let s:inactivecolors = [ [ '#212529', '#c5f6fa', 0, 0] ]
 
 let s:p = {'normal': {}, 'inactive': {}}
 let s:p.normal.left = s:colors

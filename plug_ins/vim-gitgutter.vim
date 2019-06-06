@@ -4,4 +4,4 @@ if exists('g:plug_loading_plugins')
 endif
 
 let g:gitgutter_override_sign_column_highlight = 1
-set updatetime=250
+set updatetime=100

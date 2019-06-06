@@ -1,9 +1,11 @@
 set background=light
 highlight clear
 if exists("syntax_on")
-  syntax reset
+   syntax reset
 endif
 let g:colors_name="zenfly"
+
+hi MoreMsg gui=bold guifg=black guibg=NONE
 
 " SYNTAX
 hi MatchParen gui=NONE guifg=black guibg=#ff922b
@@ -41,6 +43,7 @@ hi link htmlTagName xmlTagName
 hi link xmlEndTag xmlTagName
 hi htmlH1 gui=NONE guifg=NONE
 hi xmlAttrib gui=italic guifg=#707b87
+hi link tsxAttrib xmlAttrib
 
 hi jsStorageClass gui=italic
 
@@ -52,11 +55,21 @@ hi link jsReturn Function
 " hi jsFuncCall gui=bold
 hi jsVariableDef gui=bold
 
+hi typescriptReserved gui=bold
+hi typescriptType gui=bold
+
 hi CssSelector gui=bold
 hi link cssTagName CssSelector
 hi link cssSelectorOp CssSelector
 hi link cssPseudoClass CssSelector
 hi link cssPseudoClassId CssSelector
+
+hi graphqlType gui=bold
+hi graphqlDirective gui=italic
+
+hi GitGutterAdd guifg=green
+hi GitGutterChange guifg=orange
+hi GitGutterDelete guifg=red
 
 hi diffRemoved guifg=red
 hi diffAdded guifg=green

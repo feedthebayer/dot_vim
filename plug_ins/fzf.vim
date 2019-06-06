@@ -5,8 +5,7 @@ if exists('g:plug_loading_plugins')
 endif
 
 let g:fzf_command_prefix = 'Fzf'
-" let g:fzf_layout = { 'down': '~10' }
-let g:fzf_layout = { 'window': '10split enew' }
+let g:fzf_layout = { 'window': '15split enew' }
 
 " Leader Commands
 nnoremap <c-p> :FzfFiles<CR>
@@ -15,9 +14,9 @@ nnoremap <leader>b :FzfBuffers<CR>
 nnoremap <leader>h :FzfHistory<CR>
 
 function! s:fzf_statusline()
-  highlight fzf1 ctermfg=1 ctermbg=8
-  highlight fzf2 ctermfg=2 ctermbg=8
-  highlight fzf3 ctermfg=7 ctermbg=8
+   highlight fzf1 guifg=#000000 guibg=NONE
+   highlight fzf2 guifg=#000000 guibg=NONE
+   highlight fzf3 guifg=#000000 guibg=NONE
   setlocal statusline=%#fzf1#\ >\ %#fzf2#fz%#fzf3#f
   " setlocal statusline=%#fzf2#
 endfunction

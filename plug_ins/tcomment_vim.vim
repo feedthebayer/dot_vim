@@ -13,3 +13,4 @@ vnoremap <silent><leader>cb :TCommentBlock<CR>
 
 " Use '//' for C comments instead of '/* .. */'
 call tcomment#type#Define('c', '// %s')
+call tcomment#type#Define('ts', '// %s')
