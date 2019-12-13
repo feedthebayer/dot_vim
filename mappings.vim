@@ -63,8 +63,14 @@ vnoremap <tab> %
 nnoremap <silent> j gj
 nnoremap <silent> k gk
 
-nnoremap <silent> [[ :lprev<cr>
-nnoremap <silent> ]] :lnext<cr>
+nnoremap <silent> [[ :cp<cr>
+nnoremap <silent> ]] :cn<cr>
+
+" Stop stumbling into recording macro to 'q'
+nnoremap qq <nop>
+
+" Stop stumbling into ex mode
+nnoremap Q <nop>
 
 " ---------------
 " Window Movement
@@ -143,7 +149,7 @@ noremap <leader>cd :lcd %:p:h<CR>:pwd<CR>
 noremap <silent><leader>/ :nohls<CR>
 
 " Toggle spelling mode with <leader>s
-nnoremap <silent> <leader>s :set spell!<CR>
+nnoremap <silent> <leader>s :setlocal spell! spelllang=en_us<CR>
 
 " Quickly switch to last buffer
 nnoremap <leader><leader> :e#<CR>
@@ -164,6 +170,9 @@ nnoremap <silent> <leader>uul :t.\|s/./=/\|:nohls<cr>
 "          # --------
 nnoremap <silent> <leader>sl :normal "lyy"lpwvLr-^"lyyk"lP<cr>
 
+" Paste the last yanked text instead of the default register
+noremap <leader>p "0p
+
 " Format the entire file
 nnoremap <leader>fef mx=ggG='x
 
@@ -179,3 +188,4 @@ noremap <leader>t\ :vsplit<Bar>:wincmd l<CR>:term<CR>
 " Open terminal in a horizontal split and switch to it
 noremap <leader>t- :35split<Bar>:wincmd j<CR>:term<CR>
 
+noremap zs z

@@ -13,7 +13,7 @@ set termguicolors
 " -----------------------------
 " File Locations
 " -----------------------------
-set spellfile=~/.vim/spell/custom.en.utf-8.add
+" set spellfile=~/.local/share/nvim/site/spell/en.utf-8.add
 
 " Persistent Undo
 if has('persistent_undo')
@@ -80,7 +80,7 @@ set ignorecase " Case insensitive search
 set smartcase  " Non-case sensitive search
 set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
   \.sass-cache,*.class,*.scssc,*.cssc,sprockets%*,*.lessc,*/node_modules/*,
-  \rake-pipeline-*,tags,ctags
+  \rake-pipeline-*,tags,ctags,*/Pods/*
 
 " ---------------
 " Visual

@@ -11,7 +11,7 @@ if !has('win32') && !has('win64')
     finish
   endif
 
-  let g:ag_prg="rg --no-heading --vimgrep -g '!*lock' -g '!*flow-typed*' -g '!*__snapshots__*' -g '!*app/assets/bower_components*' -g '!*lock\.json*' "
+  let g:ag_prg="rg -S --no-heading --vimgrep -g '!*lock' -g '!*flow-typed*' -g '!*__snapshots__*' -g '!*app/assets/bower_components*' -g '!*lock\.json*' -g '!*Pods*' "
 
   let g:ag_qhandler="copen 15"
 

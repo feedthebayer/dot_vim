@@ -5,6 +5,10 @@ if exists("syntax_on")
 endif
 let g:colors_name="zenfly"
 
+" -------------------------------------
+" USE <leader>st to see highlight group
+" -------------------------------------
+
 hi MoreMsg gui=bold guifg=black guibg=NONE
 
 " SYNTAX
@@ -35,7 +39,7 @@ hi Type		    gui=NONE guifg=NONE guibg=NONE
 hi Underlined	gui=underline guifg=NONE
 hi Ignore	    gui=NONE guifg=NONE guibg=NONE
 hi Error		  gui=NONE guifg=NONE guibg=NONE
-hi Todo		    gui=NONE guifg=NONE guibg=NONE
+hi Todo	      gui=bold,italic guifg=#ffffff guibg=#f03e3e
 
 hi xmlTagName gui=italic
 hi jsClassProperty gui=bold
@@ -51,6 +55,8 @@ hi link jsArrowFunction Function
 hi link jsFuncParens Function
 hi link jsParens Function
 hi link jsReturn Function
+hi link rubyClassBlock Function
+hi link rubyControl Function
 
 " hi jsFuncCall gui=bold
 hi jsVariableDef gui=bold

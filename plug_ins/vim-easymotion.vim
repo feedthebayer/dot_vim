@@ -15,4 +15,6 @@ map <Leader>k <Plug>(easymotion-k)
 
 " Require tpope/vim-repeat to enable dot repeat support
 " `z<CR>` repeat last find motion.
-nmap z <Plug>(easymotion-s)
+" nmap z <Plug>(easymotion-s)
+
+map <Leader>z <Plug>(easymotion-s)

@@ -3,6 +3,17 @@ if exists('g:plug_loading_plugins')
   finish
 endif
 
+" -------------------------------------------
+" TO FIX PRETTIER_D !!!!!!!!!!!!!!!!!!!!!!!!!
+" -------------------------------------------
+" In `plugged/ale/autoload/ale/fixers/prettier.vim`, change this:
+"    \   '%e --version',
+" to
+"    \   'prettier --version',
+" -------------------------------------------
+" -------------------------------------------
+
+
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_enter = 1
 let g:ale_lint_on_insert_leave = 1
@@ -21,14 +32,18 @@ hi ALEWarningSign guifg=#fff3bf guibg=#fff3bf
 let g:ale_linters = {}
 let g:ale_linters['javascript'] = ['eslint']
 let g:ale_linters['typescript'] = ['tsserver', 'eslint']
+let g:ale_linters['typescriptreact'] = ['tsserver', 'eslint']
 let g:ale_linters['markdown'] = []
 let g:ale_linters['graphql'] = []
 
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_fixers['typescript'] = ['prettier']
+let g:ale_fixers['typescriptreact'] = ['prettier']
 let g:ale_fixers['markdown'] = ['prettier']
 let g:ale_fixers['html'] = ['prettier']
+let g:ale_fixers['ruby'] = ['prettier']
+let g:ale_fixers['json'] = ['prettier']
 
 " let g:ale_javascript_prettier_executable = 'prettier_d'
 let g:ale_javascript_prettier_use_global = 1
