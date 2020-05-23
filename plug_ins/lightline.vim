@@ -3,8 +3,14 @@ if exists('g:plug_loading_plugins')
   finish
 endif
 
+if (&background == "light")
+  let s:litheme = 'lightline_zenfly'
+else
+  let s:litheme = 'palenight'
+endif
+
 let g:lightline = {
-      \ 'colorscheme': 'lightline_zenfly',
+      \ 'colorscheme': s:litheme,
       \ 'active': {
       \   'left': [ [ 'lineinfo', 'paste', 'filename' ], [], [] ],
       \   'right': [ [], [], [] ]

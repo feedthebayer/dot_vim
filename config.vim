@@ -7,7 +7,15 @@ let &shell = '/bin/bash'
 " ---------------
 " Color
 " ---------------
-colorscheme zenfly
+set background=light
+
+if (&background == "light")
+  colorscheme zenfly
+else
+  colorscheme palenight
+endif
+
+
 set termguicolors
 
 " -----------------------------
@@ -33,15 +41,26 @@ set noshowmode     " Don't show the mode since Powerline shows it
 set title          " Set the title of the window in the terminal to the file
 " set colorcolumn=80 " Color the 80th column differently as a wrapping guide.
 set splitbelow       " Open new splits at the bottom instead of top
+set cmdheight=2
 
 " Hide Tildes at the end of the file
-highlight Nontext ctermfg=white guifg=white
+if (&background == "light")
+  highlight Nontext ctermfg=white guifg=white
+else
+  highlight Nontext ctermfg=black guifg=#292d3e
+endif
 
 " Slim pane divider
 set fillchars+=vert:│
-highlight VertSplit ctermfg=white guifg=white ctermbg=black guibg=black
-highlight StatusLine guifg=white guibg=black
-highlight StatusLineNC guifg=white guibg=black
+if (&background == "light")
+  highlight VertSplit ctermfg=white guifg=white ctermbg=black guibg=black
+  highlight StatusLine guifg=white guibg=black
+  highlight StatusLineNC guifg=white guibg=black
+else
+  highlight VertSplit guifg=#c792ea guibg=#292d3e
+  highlight StatusLine guifg=black guibg=white
+  highlight StatusLineNC guifg=black guibg=white
+endif
 
 " Highlight git merge conflict markers as an error message
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'

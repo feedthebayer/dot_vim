@@ -152,7 +152,12 @@ noremap <silent><leader>/ :nohls<CR>
 nnoremap <silent> <leader>s :setlocal spell! spelllang=en_us<CR>
 
 " Quickly switch to last buffer
-nnoremap <leader><leader> :e#<CR>
+
+if exists('g:vscode')
+  nnoremap <leader><leader> :<C-u>call VSCodeNotify('workbench.files.action.openPreviousWorkingFile')<CR>
+else
+  nnoremap <leader><leader> :e#<CR>
+endif
 
 " Underline the current line with '-'
 nnoremap <silent> <leader>ul :t.\|s/./-/\|:nohls<cr>
@@ -189,3 +194,9 @@ noremap <leader>t\ :vsplit<Bar>:wincmd l<CR>:term<CR>
 noremap <leader>t- :35split<Bar>:wincmd j<CR>:term<CR>
 
 noremap zs z
+
+noremap <leader>cr :CocRestart<CR>
+
+
+noremap <leader>fn :let @+ = expand("%")<CR>
+

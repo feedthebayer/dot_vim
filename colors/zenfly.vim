@@ -41,6 +41,8 @@ hi Ignore	    gui=NONE guifg=NONE guibg=NONE
 hi Error		  gui=NONE guifg=NONE guibg=NONE
 hi Todo	      gui=bold,italic guifg=#ffffff guibg=#f03e3e
 
+hi Pmenu      guibg=#E9D8FD
+
 hi xmlTagName gui=italic
 hi jsClassProperty gui=bold
 hi link htmlTagName xmlTagName
@@ -50,6 +52,9 @@ hi xmlAttrib gui=italic guifg=#707b87
 hi link tsxAttrib xmlAttrib
 
 hi jsStorageClass gui=italic
+hi jsTemplateString guifg=#364fc7
+hi link typescriptTemplate jsTemplateString
+hi jsTemplateExpression gui=italic guifg=#364fc7
 
 hi link jsArrowFunction Function
 hi link jsFuncParens Function
@@ -59,10 +64,25 @@ hi link rubyClassBlock Function
 hi link rubyControl Function
 
 " hi jsFuncCall gui=bold
-hi jsVariableDef gui=bold
+hi jsVariableDef gui=bold guifg=#6700eb
+
+hi jsImport gui=italic
+hi link typescriptImport jsImport
+hi jsExport gui=italic
+hi link typescriptExport jsExport
+
+" hi jsModuleKeyword guifg=#6700eb
 
 hi typescriptReserved gui=bold
 hi typescriptType gui=bold
+hi link typescriptVariableDeclaration jsVariableDef
+hi typescriptInterfaceName gui=italic,bold
+hi link typescriptAliasDeclaration typescriptInterfaceName
+hi typescriptTypeReference gui=italic
+
+hi typescriptIdentifierName guifg=#6700eb gui=bold
+hi link typescriptClassName typescriptIdentifierName
+hi link typescriptFuncName typescriptIdentifierName
 
 hi CssSelector gui=bold
 hi link cssTagName CssSelector
@@ -79,3 +99,14 @@ hi GitGutterDelete guifg=red
 
 hi diffRemoved guifg=red
 hi diffAdded guifg=green
+
+hi link CocErrorHighlight ALEError
+hi link CocWarningHighlight ALEWarning
+hi link CocInfoHighlight ALEWarning
+
+hi CocWarningFloat guifg=#000000
+hi CocInfoFloat guifg=#000000
+
+hi rustStorage gui=italic
+hi rustRepeat gui=bold
+

@@ -35,9 +35,6 @@ nnoremap <silent> <leader>stw :silent! StripTrailingWhiteSpaceAndSave<CR>
 function! WriteBufferIfNecessary()
   if &modified && !&readonly
     :write
-    if &filetype == "rust"
-      :RustFmt
-    endif
   endif
 endfunction
 command! WriteBufferIfNecessary call WriteBufferIfNecessary()
@@ -53,7 +50,11 @@ endfunction
 
 " Idea for MapCR from http://git.io/pt8kjA
 function! MapCR()
-  nnoremap <silent> <enter> :call CRWriteIfNecessary()<CR>
+  if exists('g:vscode')
+    nnoremap <silent> <enter> :Write<CR>
+  else
+    nnoremap <silent> <enter> :call CRWriteIfNecessary()<CR>
+  endif
 endfunction
 call MapCR()
 
