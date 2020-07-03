@@ -93,6 +93,7 @@ hi link cssPseudoClassId CssSelector
 hi graphqlType gui=bold
 hi graphqlDirective gui=italic
 
+hi SignColumn guibg=NONE
 hi GitGutterAdd guifg=green
 hi GitGutterChange guifg=orange
 hi GitGutterDelete guifg=red

@@ -53,7 +53,7 @@ let g:ale_fixers['rust'] = ['rustfmt']
 " let g:ale_javascript_prettier_executable = 'prettier_d'
 " let g:ale_javascript_prettier_use_global = 1
 " let g:ale_javascript_prettier_use_local_config = 1
-" let g:ale_javascript_prettier_options = '--no-semi --print-width 110 --trailing-comma all --tab-width 2'
+" let g:ale_javascript_prettier_options = '--no-semi --print-width 100 --trailing-comma all'
 let g:ale_javascript_eslint_executable = 'eslint_d'
 
 let g:ale_typescript_eslint_executable = 'eslint_d'
