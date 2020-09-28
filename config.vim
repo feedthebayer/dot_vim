@@ -10,7 +10,7 @@ let &shell = '/bin/bash'
 set background=light
 
 if (&background == "light")
-  colorscheme zenfly
+  colorscheme blitz
 else
   colorscheme palenight
 endif

@@ -62,5 +62,9 @@ if has("autocmd")
     " Fix highlighting in markdown files
     " autocmd FileType markdown colorscheme zenfly
     " autocmd FileType mdx colorscheme zenfly
+
+    autocmd BufRead,BufNewFile *.md setlocal spell
+    autocmd BufRead,BufNewFile *.mdx setlocal spell
+    autocmd FileType gitcommit setlocal spell
   augroup END
 endif

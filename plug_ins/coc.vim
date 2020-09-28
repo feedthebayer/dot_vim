@@ -3,6 +3,10 @@ if exists('g:plug_loading_plugins')
   finish
 endif
 
+" ----------------------
+" INSTALL COC EXTENSIONS
+" ----------------------
+let g:coc_global_extensions = ['coc-css', 'coc-html', 'coc-json', 'coc-prisma', 'coc-rls', 'coc-tsserver', 'coc-pairs', 'coc-tailwindcss', 'coc-yaml']
 
 " don't give |ins-completion-menu| messages.
 set shortmess+=c

@@ -2,5 +2,10 @@
   "coc.preferences.snippets.enable": false,
   "diagnostic.refreshOnInsertMode": true,
   "suggest.noselect": false,
-  "diagnostic.enableSign": false
+  "diagnostic.enableSign": false,
+  "diagnostic.maxWindowHeight": 40,
+  "coc.preferences.previewMaxHeight": 40,
+  "signature.maxWindowHeight": 40,
+  "list.maxHeight": 40,
+  "list.maxPreviewHeight": 40
 }
