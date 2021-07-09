@@ -38,6 +38,7 @@ let s:lighter_purple    = { "gui": "#C6B2E4", "cterm": "140" }
 let s:yellow          = { "gui": "#F3E430", "cterm": "11"  }
 let s:light_yellow    = { "gui": "#ffff87", "cterm": "228"   }
 let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
+let s:very_light_green     = { "gui": "#C6F6D5", "cterm": "3"   }
 
 let s:background = &background
 
@@ -159,7 +160,7 @@ call s:h("DiffText",      {"fg": s:dark_blue})
   " call s:h("SpellRare",   {"cterm": "underline", "fg": s:pink})
   " call s:h("SpellLocal",  {"cterm": "underline", "fg": s:dark_green})
 
-call s:h("Pmenu",         {"fg": s:norm, "bg": s:light_green})
+call s:h("Pmenu",         {"fg": s:norm, "bg": s:very_light_green})
 call s:h("PmenuSel",      {"fg": s:norm, "bg": s:dark_green})
 call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_subtle})
@@ -302,8 +303,8 @@ hi link CocErrorHighlight ALEError
 hi link CocWarningHighlight ALEWarning
 hi link CocInfoHighlight ALEWarning
 
-" hi CocWarningFloat guifg=#000000
-" hi CocInfoFloat guifg=#000000
+hi CocInfoFloat guifg=#00000
+hi CocErrorFloat guifg=#00000
 
 " hi rustStorage gui=italic
 " hi rustRepeat gui=bold

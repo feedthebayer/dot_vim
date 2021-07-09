@@ -7,5 +7,6 @@
   "coc.preferences.previewMaxHeight": 40,
   "signature.maxWindowHeight": 40,
   "list.maxHeight": 40,
-  "list.maxPreviewHeight": 40
+  "list.maxPreviewHeight": 40,
+  "tailwindCSS.headwind.runOnSave": false
 }

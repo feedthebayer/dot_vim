@@ -38,9 +38,9 @@ let g:ale_linters['graphql'] = []
 let g:ale_linters['rust'] = ['rls']
 
 let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = ['prettier']
-let g:ale_fixers['typescript'] = ['prettier']
-let g:ale_fixers['typescriptreact'] = ['prettier']
+let g:ale_fixers['javascript'] = ['prettier', 'eslint']
+let g:ale_fixers['typescript'] = ['prettier', 'eslint']
+let g:ale_fixers['typescriptreact'] = ['prettier', 'eslint']
 let g:ale_fixers['markdown'] = ['prettier']
 let g:ale_fixers['html'] = ['prettier']
 let g:ale_fixers['ruby'] = ['prettier']
@@ -49,6 +49,7 @@ let g:ale_fixers['graphql'] = ['prettier']
 let g:ale_fixers['scss'] = ['prettier']
 let g:ale_fixers['css'] = ['prettier']
 let g:ale_fixers['rust'] = ['rustfmt']
+let g:ale_fixers['prisma'] = ['prettier']
 
 " let g:ale_javascript_prettier_executable = 'prettier_d'
 " let g:ale_javascript_prettier_use_global = 1

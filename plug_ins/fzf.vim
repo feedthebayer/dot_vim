@@ -7,6 +7,9 @@ endif
 let g:fzf_command_prefix = 'Fzf'
 let g:fzf_layout = { 'window': '15split enew' }
 
+" Disable preview window
+let g:fzf_preview_window = []
+
 " Leader Commands
 
 if exists('g:vscode')

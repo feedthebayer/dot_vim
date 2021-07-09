@@ -63,8 +63,8 @@ vnoremap <tab> %
 nnoremap <silent> j gj
 nnoremap <silent> k gk
 
-nnoremap <silent> [[ :cp<cr>
-nnoremap <silent> ]] :cn<cr>
+noremap <silent><C-s> :cp<CR>
+noremap <silent><C-t> :cn<CR>
 
 " Stop stumbling into recording macro to 'q'
 nnoremap qq <nop>

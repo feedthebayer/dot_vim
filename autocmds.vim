@@ -18,7 +18,7 @@ if has("autocmd")
           \ endif
 
     " Fix trailing whitespace in all files
-    autocmd BufWritePre * silent! :StripTrailingWhiteSpace
+    " autocmd BufWritePre * silent! :StripTrailingWhiteSpace
 
     " Help mode bindings
     " <enter> to follow tag, <bs> to go back, and q to quit.

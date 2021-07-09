@@ -99,7 +99,7 @@ set ignorecase " Case insensitive search
 set smartcase  " Non-case sensitive search
 set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
   \.sass-cache,*.class,*.scssc,*.cssc,sprockets%*,*.lessc,*/node_modules/*,
-  \rake-pipeline-*,tags,ctags,*/Pods/*
+  \rake-pipeline-*,tags,ctags,*/Pods/*,*/dist/*
 
 " ---------------
 " Visual
