@@ -8,16 +8,21 @@ endif
 " ----------------------
 let g:coc_global_extensions = ['coc-css', 'coc-html', 'coc-json', 'coc-prisma', 'coc-rls', 'coc-tsserver', 'coc-pairs', 'coc-tailwindcss', 'coc-yaml']
 
+" let g:coc_filetype_map = { 'markdown.mdx': 'mdx' }
+
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
 
 " Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+" NOTE: There's always complete item selected by default, you may want to enable
+" no select by `"suggest.noselect": true` in your configuration file.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -27,11 +32,10 @@ endfunction
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
-" inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-" Or use `complete_info` if your vim support it, like:
-inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice.
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
@@ -56,6 +60,13 @@ endfunction
 
 " Highlight symbol under cursor on CursorHold
 " autocmd CursorHold * silent call CocActionAsync('highlight')
+
+hi CocErrorHighlight guifg=#ffffff guibg=#fca5a5
+hi CocWarningHighlight guifg=#ffffff guibg=#f59e0b
+hi CocInfoHighlight guifg=#ffffff guibg=#f59e0b
+hi CocWarningFloat guifg=#000000
+hi CocInfoFloat guifg=#000000
+
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
@@ -120,3 +131,7 @@ nnoremap <silent> <leader>j  :<C-u>CocNext<CR>
 nnoremap <silent> <leader>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 " nnoremap <silent> <leader>p  :<C-u>CocListResume<CR>
+
+
+" autoformat
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument

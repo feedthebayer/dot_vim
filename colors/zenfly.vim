@@ -101,13 +101,9 @@ hi GitGutterDelete guifg=red
 hi diffRemoved guifg=red
 hi diffAdded guifg=green
 
-hi link CocErrorHighlight ALEError
-hi link CocWarningHighlight ALEWarning
-hi link CocInfoHighlight ALEWarning
-
-hi CocWarningFloat guifg=#000000
-hi CocInfoFloat guifg=#000000
-
 hi rustStorage gui=italic
 hi rustRepeat gui=bold
+
+
+" NOTE - COC colors set in coc.vim so they have highest priority
 

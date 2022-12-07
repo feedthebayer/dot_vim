@@ -19,7 +19,7 @@ endif
 " All of the Plug plugins are loaded with Plug from this file.
 source ~/.vim/plug.vim
 
-" Platform (Windows, Mac, etc.) configuration.
+"Platform (Windows, Mac, etc.) configuration.
 source ~/.vim/platforms.vim
 " All of the Vim configuration.
 source ~/.vim/config.vim

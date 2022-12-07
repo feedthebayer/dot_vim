@@ -1,12 +1,9 @@
 {
-  "coc.preferences.snippets.enable": false,
   "diagnostic.refreshOnInsertMode": true,
   "suggest.noselect": false,
   "diagnostic.enableSign": false,
-  "diagnostic.maxWindowHeight": 40,
-  "coc.preferences.previewMaxHeight": 40,
-  "signature.maxWindowHeight": 40,
-  "list.maxHeight": 40,
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
   "list.maxPreviewHeight": 40,
-  "tailwindCSS.headwind.runOnSave": false
+  "tailwindCSS.headwind.runOnSave": false,
+  "eslint.autoFixOnSave": true
 }
